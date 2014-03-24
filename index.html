@@ -10,13 +10,14 @@
 </head>
 <body>
   <div class="column col-sm-3" id="sidebar">
+    <img data-src="holder.js/100%x180" alt="...">
     <a class="logo" href="http://mingyuanxia.me">PROFILE PICTURE</a>
     <br>
     <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&type=follow"
     allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20">Github</iframe>
     <ul class="nav">
       <li class="active"><a href="#bio">Bio</a></li>
-      <li><a href="#news">News</a></li>
+      <li><a href="#news">News<span class="badge pull-right">1</span></a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#pubs">Publication</a></li>
       <li><a href="#software">Software</a></li>
@@ -28,9 +29,26 @@
   </div>
 
   <div class="column col-sm-9" id="main">
-    <div class="col-sm-12" id="bio"><div class="page-header text-muted">Bio</div></div>
+    <div class="col-sm-12" id="bio"><div class="page-header text-muted"><h1>Bio</h1></div></div>
     <div class="col-sm-12" id="news"><div class="page-header text-muted">News</div></div>
-    <div class="col-sm-12" id="projects"><div class="page-header text-muted">Projects</div></div>
+    <div class="col-sm-12" id="projects">
+      <div class="page-header text-muted">Projects</div>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Project 1</h3>
+        </div>
+        <div class="panel-body">
+          Project content
+        </div>
+      </div>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Project 2</h3>
+        </div>
+        <div class="panel-body">
+          Project content
+        </div>
+      </div>
     <div class="col-sm-12" id="pubs"><div class="page-header text-muted">Publications</div></div>
     <div class="col-sm-12" id="software"><div class="page-header text-muted">Software</div></div>
     <div class="col-sm-12" id="life"><div class="page-header text-muted">Leisure Life</div></div>
