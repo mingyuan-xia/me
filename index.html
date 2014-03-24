@@ -7,54 +7,134 @@
   <title>Mingyuan Xia</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <style type="text/css">
+  #sidebar {
+    position: fixed;
+  }
+  </style>
 </head>
 <body>
-  <div class="column col-sm-3" id="sidebar">
-    <img data-src="holder.js/100%x180" alt="...">
-    <a class="logo" href="http://mingyuanxia.me">PROFILE PICTURE</a>
-    <br>
-    <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&type=follow"
-    allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20">Github</iframe>
-    <ul class="nav">
-      <li class="active"><a href="#bio">Bio</a></li>
-      <li><a href="#news">News<span class="badge pull-right">1</span></a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#pubs">Publication</a></li>
-      <li><a href="#software">Software</a></li>
-      <li><a href="#life">Leisure life</a></li>
-    </ul>
-    <ul class="nav hidden-xs" id="sidebar-footer">
-      <li><a href="#">Footer</a></li>
-    </ul>
+<div class="wrapper" >
+  <div class="column col-sm-3">
+    <div id="sidebar">
+      <img data-src="holder.js/200x180" alt="PROFILE PICTURE" href="http://mingyuanxia.me">
+      <br>
+      <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&type=follow"
+      allowtransparency="true" frameborder="0" scrolling="0" width="" height="20"></iframe>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#bio">Bio</a></li>
+        <li><a href="#news">News<span class="badge pull-right">1</span></a></li>
+        <li class="dropdown">
+          <a href="#projects">
+            Projects<span class="caret pull-right dropdown-toggle" data-toggle="dropdown" href="#"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#projects">All</a></li>
+            <li class="divider"></li>
+            <li><a href="#appaudit">AppAudit</a></li>
+          </ul>
+        </li> 
+        <li><a href="#pubs">Publication</a></li>
+        <li><a href="#software">Software</a></li>
+        <li><a href="#life">Leisure life</a></li>
+      </ul>
+      <ul class="nav hidden-xs" id="sidebar-footer">
+        <li><a href="#credit">Credit</a></li>
+      </ul>
+  </div>
   </div>
 
   <div class="column col-sm-9" id="main">
-    <div class="col-sm-12" id="bio"><div class="page-header text-muted"><h1>Bio</h1></div></div>
-    <div class="col-sm-12" id="news"><div class="page-header text-muted">News</div></div>
-    <div class="col-sm-12" id="projects">
-      <div class="page-header text-muted">Projects</div>
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">Project 1</h3>
-        </div>
-        <div class="panel-body">
-          Project content
-        </div>
+    <div class="page-header text-muted" id="bio"><h1>Bio</h1></div>
+    <br>
+    <blockquote>
+      <p>Bio</p>
+    </blockquote>
+    <div class="page-header text-muted" id="news"><h1>News</h1></div>
+    <ul>
+      <li> Awarded the prestigious IBM fellowship for year 2014-2015.
+    </ul>
+    <div class="page-header text-muted" id="projects">Projects</div>
+    <!-- one !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>AppAudit: Find Android Apps That Leak Personal Data</b>
+        </h3>
       </div>
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">Project 2</h3>
-        </div>
-        <div class="panel-body">
-          Project content
-        </div>
+      <div class="panel-body" id="appaudit">
+        <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&repo=AppAudit&type=watch&count=true"
+         allowtransparency="true" frameborder="0" scrolling="0" width="" height="20">
+        </iframe><br>
+        We develop AppAudit, a tool that can analyze an Android app and report if it leaks personal data stored on the smartphone.
+        AppAudit is designed to be used by both end users and academic research.
+        For end users, AppAudit serves as a sheild against dangerous apps.
+        For research, AppAudit can report fine-grained dump about what the app is doing, down to the every specific code location.
       </div>
-    <div class="col-sm-12" id="pubs"><div class="page-header text-muted">Publications</div></div>
-    <div class="col-sm-12" id="software"><div class="page-header text-muted">Software</div></div>
-    <div class="col-sm-12" id="life"><div class="page-header text-muted">Leisure Life</div></div>
+    </div>
+    <!-- two !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>AppFence: Sandboxing Apps</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&repo=AppFence&type=watch&count=true"
+         allowtransparency="true" frameborder="0" scrolling="0" width="" height="20">
+        </iframe><br>
+      Ever tried the privacy browsing mode of web browers? Now AppFence extends this to all Android apps.
+      AppFence is a sandbox for Android apps.
+      When the sandboxed app is exited, AppFence scrubs the traces and data produced, like it never happened.
+      </div>
+    </div>
+    <!-- three !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>MonkeyHelper: Monkey comes to play with a smartphone</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&repo=AppFence&type=watch&count=true"
+         allowtransparency="true" frameborder="0" scrolling="0" width="" height="20">
+        </iframe><br>
+      Ever tried the privacy browsing mode of web browers? Now AppFence extends this to all Android apps.
+      AppFence is a sandbox for Android apps.
+      When the sandboxed app is exited, AppFence scrubs the traces and data produced, like it never happened.
+      </div>
+    </div>
+    <!-- four !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>CuteStrike: a cute multi-player 2D CounterStrike-like game</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        CounterStrike is a classic first-person shooting game.
+        We made it cute! You will see cute buns moving around in a 2D dust2 map!
+        CuteStrike allows you to challenge AIs we design or play with real people over network.
+      </div>
+    </div>
+    <div class="page-header text-muted" id="pubs"><h1>Publications<h1></div>
+    <div class="page-header text-muted" id="software"><h1>Software</h1></div>
+    <div class="page-header text-muted" id="life"><h1>Leisure Life</h1></div>
+    My leisure life might appear as boring as still water to most people.
+    So I would like to keep the most details to myself.
+    Here are some of my favorite works from the great people, in case you are too curious about what is beneath the still water:<br>
+    <span class="glyphicon glyphicon-search"></span> Philosophy: G. W. F. Hegel, Immanuel Kant, Jean Baudrillard, 李聃 (Laozi), 墨翟 (Mozi), Kurt Gödel<br>
+    <span class="glyphicon glyphicon-music"></span> Music: 久石 譲, George Winston<br>
+    <span class="glyphicon glyphicon-film"></span> Film: Chris Nolan, 押井 守, 神山 健治, 宮﨑 駿, 新海 誠<br>
+    <span class="glyphicon glyphicon-book"></span> Literature: Victor Hugo, Alexandre Dumas, père & fils; O. Henry (William Sydney Porter), 老舍, 林语堂<br>
+    <iframe src="fonts/quill.svg" width="14" height="14" style="border:none"></iframe> Poerty: 北岛 (Zhao Zhengkai), Dante Alighieri<br>
+    Artist: Auguste Rodin, Audrey Hepburn, Gary Oldman, M. C. Escher<br>
+    <div class="page-header text-muted" id="credit"><h1>Credit</h1></div>
+    This web page is made of bootstrap3, jQuery, with icons from icomoon. I am still new to these things.
   </div>
-
+</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/holder.js"></script>
 </body>
 </html>
