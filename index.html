@@ -14,7 +14,7 @@
   </style>
 </head>
 <body>
-<div class="wrapper" >
+<div class="wrapper">
   <div class="column col-sm-3">
     <div id="sidebar">
       <img data-src="holder.js/200x180" alt="PROFILE PICTURE" href="http://mingyuanxia.me">
@@ -24,16 +24,7 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#bio">Bio</a></li>
         <li><a href="#news">News<span class="badge pull-right">1</span></a></li>
-        <li class="dropdown">
-          <a href="#projects">
-            Projects<span class="caret pull-right dropdown-toggle" data-toggle="dropdown" href="#"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#projects">All</a></li>
-            <li class="divider"></li>
-            <li><a href="#appaudit">AppAudit</a></li>
-          </ul>
-        </li> 
+        <li class="dropdown"><a href="#projects">Projects</a></li> 
         <li><a href="#pubs">Publication</a></li>
         <li><a href="#software">Software</a></li>
         <li><a href="#life">Leisure life</a></li>
@@ -46,15 +37,27 @@
 
   <div class="column col-sm-9" id="main">
     <div class="page-header text-muted" id="bio"><h1>Bio</h1></div>
-    <br>
-    <blockquote>
-      <p>Bio</p>
-    </blockquote>
-    <div class="page-header text-muted" id="news"><h1>News</h1></div>
+    <h4>Mingyuan Xia is a third-year Ph.D. student in Computer Science at McGill University. He is interested in topics including mobile software, software security and reliability, mobile-cloud systems and virtualization. If you are looking for profession-related stuff, the navigation bar on the left will best help you.</h4>
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              Non-profession Bio
+            </a>
+          </h4>
+        </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-header text-muted" id="news"><h1>News</h1></div>
     <ul>
       <li> Awarded the prestigious IBM fellowship for year 2014-2015.
     </ul>
-    <div class="page-header text-muted" id="projects">Projects</div>
+    <div class="page-header text-muted" id="projects"><h1>Projects</h1></div>
     <!-- one !-->
     <div class="panel panel-info">
       <div class="panel-heading">
@@ -83,9 +86,9 @@
         <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&repo=AppFence&type=watch&count=true"
          allowtransparency="true" frameborder="0" scrolling="0" width="" height="20">
         </iframe><br>
-      Ever tried the privacy browsing mode of web browers? Now AppFence extends this to all Android apps.
-      AppFence is a sandbox for Android apps.
-      When the sandboxed app is exited, AppFence scrubs the traces and data produced, like it never happened.
+        Ever tried the privacy browsing mode of web browers? Now AppFence extends this to all Android apps.
+        AppFence is a universal sandbox for Android apps. Apps that enter AppFence appear like newly installed.
+        When app exits from the AppFence, all traces and data produced are scrubed, like it never happened.
       </div>
     </div>
     <!-- three !-->
@@ -96,12 +99,9 @@
         </h3>
       </div>
       <div class="panel-body">
-        <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&repo=AppFence&type=watch&count=true"
+        <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&repo=MonkeyHelper&type=watch&count=true"
          allowtransparency="true" frameborder="0" scrolling="0" width="" height="20">
         </iframe><br>
-      Ever tried the privacy browsing mode of web browers? Now AppFence extends this to all Android apps.
-      AppFence is a sandbox for Android apps.
-      When the sandboxed app is exited, AppFence scrubs the traces and data produced, like it never happened.
       </div>
     </div>
     <!-- four !-->
@@ -117,6 +117,19 @@
         CuteStrike allows you to challenge AIs we design or play with real people over network.
       </div>
     </div>
+    <!-- five !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>dumpvb6: Possibly the world's best VB6 decompiler</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        This is the geeky toy I made when I was 14. You give me a VB6 program and I give you the source code.
+        VB6 stands for Microsoft's Visual Basic 6, a lanauge that produces GUI programs in minutes!
+        Anyway, VB6 was popular and successful.
+      </div>
+    </div>
     <div class="page-header text-muted" id="pubs"><h1>Publications<h1></div>
     <div class="page-header text-muted" id="software"><h1>Software</h1></div>
     <div class="page-header text-muted" id="life"><h1>Leisure Life</h1></div>
@@ -124,11 +137,29 @@
     So I would like to keep the most details to myself.
     Here are some of my favorite works from the great people, in case you are too curious about what is beneath the still water:<br>
     <span class="glyphicon glyphicon-search"></span> Philosophy: G. W. F. Hegel, Immanuel Kant, Jean Baudrillard, 李聃 (Laozi), 墨翟 (Mozi), Kurt Gödel<br>
+    <blockquote class="blockquote-reverse">
+      <p>The simulacrum is never what hides the truth - it is truth that hides that fact that there is none. The simulacrum is true.</p>
+      <footer><cite title="Source Title">Ecclesiastes</cite>, as quoted in Simulacra and Simulation</footer>
+    </blockquote>
     <span class="glyphicon glyphicon-music"></span> Music: 久石 譲, George Winston<br>
     <span class="glyphicon glyphicon-film"></span> Film: Chris Nolan, 押井 守, 神山 健治, 宮﨑 駿, 新海 誠<br>
     <span class="glyphicon glyphicon-book"></span> Literature: Victor Hugo, Alexandre Dumas, père & fils; O. Henry (William Sydney Porter), 老舍, 林语堂<br>
-    <iframe src="fonts/quill.svg" width="14" height="14" style="border:none"></iframe> Poerty: 北岛 (Zhao Zhengkai), Dante Alighieri<br>
+    <blockquote class="blockquote-reverse">
+      <p>Did you ever know an officer to handcuff a prisoner to his right hand?</p>
+      <footer>O. Henry in <cite title="Hearts and Hands">Hearts and Hands</cite></footer>
+    </blockquote>
+
+    <iframe src="fonts/quill.svg" width="14" height="14" style="border:none"></iframe> Poerty: 北岛 (Zhao Zhengkai), Dante Alighieri, Alexander Pope<br>
+    <blockquote class="blockquote-reverse">
+      <p>真的，这就是春天呵，狂跳的心搅乱水中的浮云。</p>
+      <footer>北岛 <cite title="Five-color flower">真的</cite></footer>
+    </blockquote>
     Artist: Auguste Rodin, Audrey Hepburn, Gary Oldman, M. C. Escher<br>
+    <blockquote class="blockquote-reverse">
+      <p>Gordon: I'm sorry, Harvey. For everything. But, please. Please don't hurt him.</p>
+      <footer>Gary Oldman, cast in <cite title="Five-color flower">The Dark Knight</cite></footer>
+    </blockquote>
+
     <div class="page-header text-muted" id="credit"><h1>Credit</h1></div>
     This web page is made of bootstrap3, jQuery, with icons from icomoon. I am still new to these things.
   </div>
