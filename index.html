@@ -13,21 +13,21 @@
   }
   </style>
 </head>
-<body>
+<body data-spy="scroll" data-target="#sidebar">
 <div class="container">
   <div class="column col-sm-3">
-    <div id="sidebar">
+    <div id="sidebar" class="bg-success">
+      <h2>Mingyuan Xia</h2>
       <img data-src="holder.js/200x180" alt="PROFILE PICTURE" href="http://mingyuanxia.me">
-      <br>
+      <p>Third-year Ph.D. student @ McGill</p>
       <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&type=follow"
-      allowtransparency="true" frameborder="0" scrolling="0" width="" height="20"></iframe><br>
-      Mingyuan Xia, 3rd Ph.D. student @ McGill.<br>
-      <span class="label label-primary">Mobile Systems</span>
+      allowtransparency="true" frameborder="0" scrolling="0" width="150" height="20"></iframe><br>
+      <span class="label label-primary">Mobile Systems</span><br>
       <span class="label label-primary">Software security and reliability</span><br>
-      <span class="label label-primary">Mobile-cloud Systems</span>
-      <span class="label label-primary">Virtualization</span>
+      <span class="label label-primary">Mobile-cloud Systems</span><br>
+      <span class="label label-primary">Virtualization</span><br>
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="#news">News<span class="badge pull-right">1</span></a></li>
+        <li class="active"><a href="#news">News<span class="badge">1</span></a></li>
         <li><a href="#projects">Projects</a></li> 
         <li><a href="#pubs">Publication</a></li>
         <li><a href="#software">Software</a></li>
@@ -267,5 +267,15 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/holder.js"></script>
+<script>
+// sidebar effects
+$('#sidebar li').click(function(e) {
+  $('#sidebar li.active').removeClass('active');
+  var $this = $(this);
+  if (!$this.hasClass('active')) {
+    $this.addClass('active');
+  }
+});
+</script>
 </body>
 </html>
