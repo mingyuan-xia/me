@@ -11,6 +11,27 @@
   #sidebar {
     position: fixed;
   }
+  .carousel .item {
+    background-color:#bbb;
+  }
+  .cute-carousel-img {
+    width: auto;
+    height: 400px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .dumpvb6-carousel-img {
+    width: auto;
+    height: 250px;
+    max-height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carousel-caption {
+    color: #ff0000;
+    font-weight:bold;
+  }
   </style>
 </head>
 <body data-spy="scroll" data-target="#sidebar">
@@ -103,19 +124,94 @@
         CounterStrike is a classic first-person shooting game.
         We made it cute! You will see cute buns moving around in a 2D dust2 map!
         CuteStrike allows you to challenge AIs we design or play with real people over network.
+        <br>
+        <div id="carousel-cute" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-cute" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-cute" data-slide-to="1"></li>
+            <li data-target="#carousel-cute" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img class="cute-carousel-img" src="img/cute1.png" alt="main screen">
+              <div class="carousel-caption">
+                The main screen of the game.
+              </div>
+            </div>
+            <div class="item">
+              <img class="cute-carousel-img" src="img/cute2.png" alt="cute caught">
+              <div class="carousel-caption">
+                I got caught by the noobs AI while taking the photo.
+              </div>
+            </div>
+            <div class="item">
+              <img class="cute-carousel-img" src="img/cute3.png" alt="weapons">
+              <div class="carousel-caption">
+                Buying favorite weapons.
+              </div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-cute" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-cute" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
       </div>
     </div>
     <!-- five !-->
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>dumpvb6: Possibly the world's best VB6 decompiler</b>
+          <b>dumpvb6: A practical VB6 decompiler</b>
         </h3>
       </div>
       <div class="panel-body">
-        This is the geeky toy I made when I was 14. You give me a VB6 program and I give you the source code.
+        This is a geeky toy I made when I was 14. You give me a VB6 program and I give you the source code.
         VB6 stands for Microsoft's Visual Basic 6, a lanauge that produces GUI programs in minutes!
-        Anyway, VB6 was popular and successful.
+        VB6 is straightforward and easy to learn and was once the most popular and successful language for GUI programs.
+        Dumpvb6 did a hacky job by present the source code of a compiled VB6 program, which exposes all its secrets.
+        Due to potential copyright concern, this project is only for academic purpose and not intended to be released.
+        <div id="carousel-dumpvb6" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-dumpvb6" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-dumpvb6" data-slide-to="1"></li>
+            <li data-target="#carousel-dumpvb6" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img class="dumpvb6-carousel-img" src="img/dumpvb6-vb6.png" alt="Code snippet of VB6">
+              <div class="carousel-caption">
+                An example code snippet of VB6, one button and one label widget.
+              </div>
+            </div>
+            <div class="item">
+              <img class="dumpvb6-carousel-img" src="img/dumpvb6-asm.png" alt="VB6 assembly">
+              <div class="carousel-caption">
+                The compiled assembly code for the first two lines.
+              </div>
+            </div>
+            <div class="item">
+              <img class="dumpvb6-carousel-img" src="img/dumpvb6-decompiled.png" alt="decompiled VB6">
+              <div class="carousel-caption">
+                The decompiled code by dumpvb6.
+              </div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-dumpvb6" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-dumpvb6" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
       </div>
     </div>
     <div class="page-header text-muted" id="pubs"><h1>Publications<h1></div>
@@ -204,7 +300,6 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion1" href="#life-art">
-              
               Artist: Auguste Rodin, Audrey Hepburn, Gary Oldman, M. C. Escher
             </a>
           </h4>
@@ -232,7 +327,7 @@
           <div class="panel-body">
             <blockquote class="blockquote">
               <p>Cite here</p>
-              <footer><cite title=""></cite></footer>
+              <footer>押井 守 <cite title="Ghost in the shell"></cite></footer>
             </blockquote>
           </div>
         </div>
