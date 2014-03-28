@@ -44,6 +44,7 @@
       <p>Third-year Ph.D. student @ McGill</p>
       <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&type=follow"
       allowtransparency="true" frameborder="0" scrolling="0" width="150" height="20"></iframe><br>
+      <p>[FirstName].[LastName]@mail.mcgill.ca</p>
       <span class="label label-primary">Mobile Systems</span><br>
       <span class="label label-primary">Software security and reliability</span><br>
       <span class="label label-primary">Mobile-cloud Systems</span><br>
@@ -70,7 +71,8 @@
       <div class="panel-heading">
         <h3 class="panel-title">
           <b>AppAudit: Find Apps That Leak Personal Data</b>
-           <span class="label label-primary">Software security</span>
+          <span class="label label-primary">Software security</span>
+          <span class="label label-primary">Mobile apps</span>
         </h3>
         <div class="btn-group pull-right">
           <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
@@ -80,7 +82,7 @@
       </div>
       <div class="panel-body" id="appaudit">
         <p>
-        We develop AppAudit, a tool that can analyze an Android app and report if it leaks personal data stored on the smartphone.
+        We develop AppAudit, a tool that analyzes the code of Android apps and find data-leaking apps.
         AppAudit is designed to be used by both end users and academic research.
         For end users, AppAudit serves as a sheild against dangerous apps.
         For research, AppAudit can report fine-grained dump about what the app is doing, down to the every specific code location.
@@ -93,6 +95,7 @@
         <h3 class="panel-title">
           <b>AppFence: Sandboxing Apps</b>
           <span class="label label-primary">Software security</span>
+          <span class="label label-primary">Mobile apps</span>
         </h3>
         <div class="btn-group pull-right">
           <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
@@ -123,6 +126,32 @@
       </div>
       <div class="panel-body">
         <p>
+          We provide a toolchian written in Python to capture, replay and analyze the live user interations with a smartphone.
+          The toolchain contains a universial <b>recorder</b>, which can work with all real smartphones and record live traces.
+          <b>replayer</b> comes with the recorder to replay the obtained traces, as if you were doing everything again.
+          Finally, our <b>analyzer</b> can visualize the usage trace with interesting analytical results such as user's habits, common gestures and high frequent tracelet.
+        </p>
+      </div>
+    </div>
+    <!-- three !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>SLIM: An STL-like library for mobile-cloud programming</b>
+          <span class="label label-primary">Mobile-cloud</span>
+        </h3>
+        <div class="btn-group pull-right">
+          <a class="btn btn-default" href="http://apsys11.ucsd.edu/papers/apsys11-shi.pdf" data-toggle="tooltip" data-placement="top" title="APSys'11 paper"><span class="glyphicon glyphicon-file"></span></a>
+          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Download scripts"><span class="glyphicon glyphicon-download-alt"></span></a>
+          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Visit Github repo"><span class="icomoon icon-github"></span></a>
+        </div>
+      </div>
+      <div class="panel-body">
+        <p>
+          Programming a mobile-cloud application is hard considering the efforts of synchronizing data, managing different views, consistency and performance.
+          We provide SLIM, a library that provide STL-like interfaces while distributing data across the device and the cloud.
+          SLIM reduces the programming efforts by providing interfaces familar to developers along with various pre-designed policies that address common tradeoffs.
+          This project is an intern project with Microsoft Research Asia and has been published on Asia-Pacific System Symposium 2011.
         </p>
       </div>
     </div>
