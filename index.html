@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/prettify.css">
+  <link rel="stylesheet" href="css/desert.css">
   <style type="text/css">
   #sidebar {
     position: fixed;
@@ -22,20 +24,13 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .dumpvb6-carousel-img {
-    width: auto;
-    height: 270px;
-    max-height: 270px;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .carousel-caption {
     color: #ff0000;
     font-weight:bold;
   }
   </style>
 </head>
-<body data-spy="scroll" data-target="#sidebar">
+<body data-spy="scroll" data-target="#sidebar" onload="prettyPrint()">
 <div class="container">
   <div class="column col-sm-3">
     <div id="sidebar" class="bg-success">
@@ -153,7 +148,22 @@
           We provide SLIM, a library that provide STL-like interfaces while distributing data across the device and the cloud.
           SLIM reduces the programming efforts by providing interfaces familar to developers along with various pre-designed policies that address common tradeoffs.
           This project is an intern project with Microsoft Research Asia and has been published on Asia-Pacific System Symposium 2011.
+          The below code snippet shows an example RSS reader that fetches and displays feed
         </p>
+        <pre class="prettyprint lang-c">
+// a SLIM vector of feed items
+// persistency policy: stored in memory, flash and cloud
+// read/write policy: writes come from cloud to device
+// update policy: invoke callback when the vector has one dirty (new) item
+typedef SLIMVector< FeedItem, Memory_Flash_Cloud, Cloud_To_Device, OnDirtyBound<1> > UpdateVector;
+UpdateVector feeds("rss://..");
+// set update callback function
+feeds.onUpdate([] (FeedItem newFeeds[]) {
+// iterate through all newfeeds and display
+    foreach (feed in newFeeds)
+      display(feed);
+});
+        </pre>
       </div>
     </div>
     <!-- four !-->
@@ -219,41 +229,70 @@
         VB6 is straightforward and easy to learn and was once the most popular and successful language for GUI programs.
         Dumpvb6 did a hacky job by present the source code of a compiled VB6 program, which exposes all its secrets.
         Due to potential copyright concern, this project is only for academic purpose and not intended to be released.
-        <div id="carousel-dumpvb6" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-dumpvb6" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-dumpvb6" data-slide-to="1"></li>
-            <li data-target="#carousel-dumpvb6" data-slide-to="2"></li>
-          </ol>
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img class="dumpvb6-carousel-img" src="img/dumpvb6-vb6.jpg" alt="Code snippet of VB6">
-              <div class="carousel-caption">
-                An example code snippet of VB6, one button and one label widget.
-              </div>
-            </div>
-            <div class="item">
-              <img class="dumpvb6-carousel-img" src="img/dumpvb6-asm.jpg" alt="VB6 assembly">
-              <div class="carousel-caption">
-                The compiled assembly code for the first two lines.
-              </div>
-            </div>
-            <div class="item">
-              <img class="dumpvb6-carousel-img" src="img/dumpvb6-decompiled.jpg" alt="decompiled VB6">
-              <div class="carousel-caption">
-                The decompiled code by dumpvb6.
-              </div>
-            </div>
-          </div>
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-dumpvb6" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#carousel-dumpvb6" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
+        <br>
+        <img class="dumpvb6-carousel-img" src="img/dumpvb6-vb6.jpg" alt="Code snippet of VB6">
+        <br>
+        <div class="col-md-6">
+          <pre>
+push ebp
+mov ebp, esp
+sub esp, 18
+push jmp.MSVBVM60__vbaExceptHandler
+mov eax, dword ptr fs:[0]
+push eax
+move dword pt fs:[0], esp
+mov eax, 9C
+call jmp.MSVBVM60.__vbaChkstk
+push ebx
+push esi
+push edi
+mov [ebp-18], esp
+mov [ebp-14], 00401098
+mov eax, [ebp+8]
+and eax, 1
+mov [ebp-10], eax
+mov ecx, [ebp+8]
+and ecx, FFFFFFFE
+mov [ebp+8], ecx
+mov [ebp-C], 0
+mov edx, [ebp+8]
+mov eax, [edx]
+mov ecx, [ebp+8]
+push ecx
+call [eax+4]
+mov [ebp-4], 1
+mov [ebp-4], 2
+push -1
+call __vbaOnError
+mov [ebp-4], 3
+lea edx, [ebp-38]
+push edx
+...
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <pre class="prettyprint lang-vb">
+Private Sub Command1_Click()
+  On Error Resume Next
+  Dim local68 As String
+  Dim local58 As String
+  Dim local48 As String
+  Dim local38 As String
+  Dim local28 As Variant
+  local38 = Now()
+  local48 = Day(local38)
+  __local24 = __vbaI2Var(local48)
+  If __local24 > 10 Then
+    local68 = ">10"
+    Label1.Caption = local68
+  Else
+    local68 = "<=10"
+    Label1.Caption = local68
+  End If
+  local58 = __local24
+  Msgbox (local58)
+End Sub
+          </pre>
         </div>
       </div>
     </div>
@@ -405,6 +444,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/holder.js"></script>
+<script src="js/prettify.js"></script>
 <script>
 // sidebar effects
 $('#sidebar li').click(function(e) {
