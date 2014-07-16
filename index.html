@@ -83,7 +83,7 @@
     <div class="page-header text-muted" id="bio"><h1>Bio</h1></div>
     Though we are still in memory of Jobs and his fantastic introduction of Mac Book Air, the world of consumer electronics has indeed shifted toward smartphones, tablets and wearable devices. These new devices offer greatest mobility as well as millions of applications to choose from. My research focuses on the software systems on these devices and intend to answer some critical questions:
     <ul>
-      <li> Mobile devices indeed carry astonishing great amount of personal data, such as locations, browsing history, call logs. We need to make sure apps are properly using them and there is a way to have data under control. See our AppAudit and AppFence projects.
+      <li> Mobile devices indeed carry astonishing great amount of personal data, such as locations, browsing history, call logs. We need to make sure apps are properly using them and there is a way to have data under control. See our AppAudit and AppBox projects.
       <li> Mobile devices offer great mobility at the cost of a limited battery life. We want to improve this situation from the software perspective (both apps and operating systems). See our HotPower paper.
       <li> A new mobile app can be developed in an incredibly short time. However, making it right (no crash, no lag, energy efficient, always responsive) is also incredibly hard. We intend to bridge this gap with new techniques.
     </ul>
@@ -117,7 +117,7 @@
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>AppFence: Sandboxing Apps</b>
+          <b>AppBox: Sandboxing Apps</b>
           <span class="label label-primary">Software security</span>
           <span class="label label-primary">Mobile apps</span>
         </h3>
@@ -129,9 +129,9 @@
       </div>
       <div class="panel-body">
         <p>
-        Ever tried the privacy browsing mode of web browers? Now AppFence extends this to all Android apps.
-        AppFence is a universal sandbox for Android apps. Apps that enter AppFence appear like newly installed.
-        When app exits from the AppFence, all traces and data produced are scrubed, like it never happened.
+        Ever tried the privacy browsing mode of web browers? Now AppBox extends this to all Android apps.
+        AppBox is a universal sandbox for Android apps. Apps that enter AppBox appear like newly installed and have limited accesses to system resources and user data.
+        When app exits from the AppBox, all traces and data produced are scrubed, like it never happened.
         </p>
       </div>
     </div>
@@ -150,10 +150,11 @@
       </div>
       <div class="panel-body">
         <p>
-          We provide a toolchian written in Python to capture, replay and analyze the live user interations with a smartphone.
-          The toolchain contains a universial <b>recorder</b>, which can work with all real smartphones and record live traces.
-          <b>replayer</b> comes with the recorder to replay the obtained traces, as if you were doing everything again.
-          Finally, our <b>analyzer</b> can visualize the usage trace with interesting analytical results such as user's habits, common gestures and high frequent tracelet.
+          We provide a toolchian written in Python to capture, replay, manipulate and analyze the live user interations with a smartphone.
+	  Our record-and-replay capability is universal for all Android boxes. The manipulation and analyses can be highly customized with Python code.
+	  See a video showing record-and-replay AngryBirds.
+	  <p>
+	  <iframe width="420" height="315" src="//www.youtube.com/embed/vYlO0UrhRR8" frameborder="0" allowfullscreen></iframe>
         </p>
       </div>
     </div>
