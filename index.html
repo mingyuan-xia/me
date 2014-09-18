@@ -11,14 +11,6 @@
   <link rel="stylesheet" href="css/prettify.css">
   <link rel="stylesheet" href="css/desert.css">
   <style type="text/css">
-  body {
-    padding-top:65px;
-    background-color: #FFFFE6;
-  }
-  #topbar a {
-    font-weight:bold;
-    font-size: large;
-  }
   .carousel .item {
     background-color:#bbb;
   }
@@ -35,51 +27,48 @@
   }
   </style>
 </head>
-<body data-spy="scroll" data-target="#topbar" onload="prettyPrint()">
-<div class="nav navbar-fixed-top navbar-inverse">
-  <div class="container" id="topbar">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#news">News<span class="badge">3</span></a></li>
-      <li><a href="#projects">Projects</a></li> 
-      <li><a href="#pubs">Publication</a></li>
-      <li><a href="#life">Leisure life</a></li>
-    </ul>
-  </div>
-</div>
-
+<body onload="prettyPrint()">
 <div class="container">
-  <div class="col-sm-3">
+<div class="row">
+  <div class="col-sm-4 col-xs-12">
     <div id="sidebar" class="nav affix">
       <div class="text-center">
         <a href="http://mingyuanxia.me">
          <img src="img/mingyuan-xia.jpg" width="200px" height="200px" alt="PROFILE PICTURE">
         </a>
+        <h2>Mingyuan (Ken) Xia</h2>
+        <img src="img/chinese.png" width="160"/><br>
+        <img src="img/email.png" alt="EMAIL ADDR"><br>
+        <a href="http://cs.mcgill.ca">
+          <img src="http://www.mcgill.ca/waterislife/files/waterislife/styles/wysiwyg_medium/public/images/mcgill_logo_rp_0.png?itok=rWD3tGjG" width="40" height="48" alt="MCGILL">
+        </a>
+        <a href="https://github.com/mingyuan-xia/">
+          <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="48" height="48" />
+        </a>
+        <a href="http://dblp.uni-trier.de/pers/hd/x/Xia:Mingyuan.html">
+          <img src="img/dblp-logo.png" alt="" width="48" height="48">
+        </a>
       </div>
-      <h2>Mingyuan Xia</h2>
-      <p class="pull-right">3rd-year Ph.D. student</p>
-      <img src="img/email.png" alt="EMAIL ADDR"><br>
       <hr>
-      <img src="img/mcgill-logo.gif" width="100px" alt="MCGILL"><br>
-      <iframe src="http://ghbtns.com/github-btn.html?user=mingyuan-xia&type=follow"
-      allowtransparency="true" frameborder="0" scrolling="0" width="150" height="20"></iframe><br>
-      <a href="http://dblp.uni-trier.de/pers/hd/x/Xia:Mingyuan.html">
-        <img src="http://dblp.uni-trier.de/img/logo.png" alt="" width="120px"><br>
-      </a>
-      <hr>
-      <span class="label label-primary">Mobile Systems</span><br>
-      <span class="label label-primary">Software security and reliability</span><br>
-      <span class="label label-primary">Mobile-cloud Systems</span><br>
-      <span class="label label-primary">Virtualization</span><br>
+      <div class="panel panel-info">
+        <div class="panel-heading text-center">
+          <h3 class="panel-title"><b>News</b></h3>
+        </div>
+        <div class="panel-body" id="appaudit">
+          <span class="glyphicon glyphicon-pushpin"></span>
+          <b><a href="https://github.com/mcgill-cpslab/droidresearch">Mobile Research Tools and Resources</a></b><br>
+          <span class="glyphicon glyphicon-pushpin"></span>
+          <b><a href="https://github.com/mingyuan-xia/AppAudit/wiki/Android-Malware-Analysis-Report-Collection">Large collection of Android virus analyses</a>.</b><br>
+          <span class="glyphicon glyphicon-pushpin"></span>
+          <b>New <a href="http://systor14.systor.org/accepted.html">SYSTOR'14</a> paper on VM deployment</b> <br>
+          <span class="glyphicon glyphicon-pushpin"></span>
+          <b>Awarded <a href="http://www.research.ibm.com/university/phdfellowship/">IBM fellowship</a> for year 2014-2015</b><br>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="column col-sm-9" id="main">
-  <div class="page-header text-muted" id="news"><h1>News</h1></div>
-    <ul>
-      <li> <b>[Mobile virus analysis collection]</b> We collected 272 analysis reports of 128 Android viruses, including sources from leading mobile security companys, labs, and research institutes. Find the report from <a href="https://github.com/mingyuan-xia/AppAudit/wiki/Android-Malware-Analysis-Report-Collection">Android Malware Analysis Report Collection</a>.
-      <li> <b>[SYSTOR'14]</b> <a href="http://systor14.systor.org/accepted.html">Taming IO Spikes in Enterprise and Campus VM Deployment</a> with IBM accepted. 
-      <li> <b>[IBM fellowship]</b> Awarded <a href="http://www.research.ibm.com/university/phdfellowship/">the prestigious IBM fellowship</a> for year 2014-2015.
-    </ul>
+  <div class="col-sm-8 col-xs-12" id="main">
     <div class="page-header text-muted" id="bio"><h1>Bio
     <span class="glyphicon glyphicon-plus btn pull-right" data-toggle="collapse" data-target="#biotext"</span></h1>
     </div>
@@ -269,7 +258,7 @@ feeds.onUpdate([] (FeedItem newFeeds[]) {
         <br>
         <img class="dumpvb6-carousel-img" src="img/dumpvb6-vb6.jpg" alt="Code snippet of VB6">
         <br>
-        <div class="col-md-6">
+        <div class="col-sm-6">
           <pre>
 push ebp
 mov ebp, esp
@@ -307,7 +296,7 @@ push edx
 ...
           </pre>
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-6">
           <pre class="prettyprint lang-vb">
 Private Sub Command1_Click()
   On Error Resume Next
@@ -474,6 +463,7 @@ End Sub
       </div>
     </div>
   </div>
+</div>
 </div>
 <div id="footer">
   <div class="container">
