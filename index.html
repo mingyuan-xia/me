@@ -33,19 +33,19 @@
   <div class="col-sm-4 col-xs-12">
     <div id="sidebar" class="nav affix">
       <div class="text-center">
-        <a href="http://mingyuanxia.me">
-         <img src="img/mingyuan-xia.jpg" width="200px" height="200px" alt="PROFILE PICTURE">
+        <a href="http://mxia.me">
+         <img src="img/mingyuan-xia.jpg" width="200px" height="200px">
         </a>
         <h2>Mingyuan (Ken) Xia</h2>
         <img src="img/chinese.png" width="160"/><br>
-        <img src="img/email.png" alt="EMAIL ADDR"><br>
-        <a href="http://cs.mcgill.ca">
+        <img src="img/email.png"><br>
+        <a href="http://cs.mcgill.ca" title="McGill University">
           <img src="http://www.mcgill.ca/waterislife/files/waterislife/styles/wysiwyg_medium/public/images/mcgill_logo_rp_0.png?itok=rWD3tGjG" width="40" height="48" alt="MCGILL">
         </a>
-        <a href="https://github.com/mingyuan-xia/">
+        <a href="https://github.com/mingyuan-xia/" title="Github page">
           <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" width="48" height="48" />
         </a>
-        <a href="http://dblp.uni-trier.de/pers/hd/x/Xia:Mingyuan.html">
+        <a href="http://dblp.uni-trier.de/pers/hd/x/Xia:Mingyuan.html" title="Publication list">
           <img src="img/dblp-logo.png" alt="" width="48" height="48">
         </a>
       </div>
@@ -58,7 +58,7 @@
           <span class="glyphicon glyphicon-pushpin"></span>
           <b><a href="https://github.com/mcgill-cpslab/droidresearch">Mobile Research Tools and Resources</a></b><br>
           <span class="glyphicon glyphicon-pushpin"></span>
-          <b><a href="https://github.com/mingyuan-xia/AppAudit/wiki/Android-Malware-Analysis-Report-Collection">Large collection of Android virus analyses</a>.</b><br>
+          <b><a href="https://github.com/mingyuan-xia/AppAudit/wiki/Android-Malware-Analysis-Report-Collection">Large collection of Android virus analyses</a></b><br>
           <span class="glyphicon glyphicon-pushpin"></span>
           <b>New <a href="http://systor14.systor.org/accepted.html">SYSTOR'14</a> paper on VM deployment</b> <br>
           <span class="glyphicon glyphicon-pushpin"></span>
@@ -69,19 +69,12 @@
   </div>
 
   <div class="col-sm-8 col-xs-12" id="main">
-    <div class="page-header text-muted" id="bio"><h1>Bio
-    <span class="glyphicon glyphicon-plus btn pull-right" data-toggle="collapse" data-target="#biotext"</span></h1>
+    <div class="page-header text-muted text-right" id="bio"><h1>Bio
     </div>
-    <div class="alert alert-info collapse" role="alert" id="biotext">
-    Though we are still in memory of Jobs and his fantastic introduction of Mac Book Air, the world of consumer electronics has indeed shifted toward smartphones, tablets and wearable devices. These new devices offer greatest mobility as well as millions of applications to choose from. My research focuses on the software systems on these devices and intend to answer some critical questions:
-    <ul>
-      <li> Mobile devices indeed carry astonishing great amount of personal data, such as locations, browsing history, call logs. We need to make sure apps are properly using them and there is a way to have data under control. See our AppAudit and AppBox projects.
-      <li> Mobile devices offer great mobility at the cost of a limited battery life. We want to improve this situation from the software perspective (both apps and operating systems). See our HotPower paper.
-      <li> A new mobile app can be developed in an incredibly short time. However, making it right (no crash, no lag, energy efficient, always responsive) is also incredibly hard. We intend to bridge this gap with new techniques.
-    </ul>
-    To address these research problems, I am interested in techniques such as static/dynamic program analysis, tracing and analysis, virtualization and system design and optimization. 
-    </div>
-    <div class="page-header text-muted" id="projects"><h1>Projects</h1></div>
+    <p id="biotext">
+      I am a fourth-year PhD. student at McGill University. I am currently working on improving the security and quality of mobile applications with the help of program analysis. I am also interested in cloud storage systems and big data systems.
+    </p>
+    <div class="page-header text-muted text-right" id="projects"><h1>Projects</h1></div>
     <!-- one !-->
     <div class="panel panel-info">
       <div class="panel-heading">
@@ -251,78 +244,15 @@ feeds.onUpdate([] (FeedItem newFeeds[]) {
       </div>
       <div class="panel-body">
         This is a geeky toy I made when I was 14. You give me a VB6 program and I give you the source code.
-        VB6 stands for Microsoft's Visual Basic 6, a lanauge that produces GUI programs in minutes!
+        VB6 stands for Microsoft's Visual Basic 6, a language that produces GUI programs in minutes!
         VB6 is straightforward and easy to learn and was once the most popular and successful language for GUI programs.
         Dumpvb6 did a hacky job by present the source code of a compiled VB6 program, which exposes all its secrets.
         Due to potential copyright concern, this project is only for academic purpose and not intended to be released.
         <br>
         <img class="dumpvb6-carousel-img" src="img/dumpvb6-vb6.jpg" alt="Code snippet of VB6">
-        <br>
-        <div class="col-sm-6">
-          <pre>
-push ebp
-mov ebp, esp
-sub esp, 18
-push jmp.MSVBVM60__vbaExceptHandler
-mov eax, dword ptr fs:[0]
-push eax
-move dword pt fs:[0], esp
-mov eax, 9C
-call jmp.MSVBVM60.__vbaChkstk
-push ebx
-push esi
-push edi
-mov [ebp-18], esp
-mov [ebp-14], 00401098
-mov eax, [ebp+8]
-and eax, 1
-mov [ebp-10], eax
-mov ecx, [ebp+8]
-and ecx, FFFFFFFE
-mov [ebp+8], ecx
-mov [ebp-C], 0
-mov edx, [ebp+8]
-mov eax, [edx]
-mov ecx, [ebp+8]
-push ecx
-call [eax+4]
-mov [ebp-4], 1
-mov [ebp-4], 2
-push -1
-call __vbaOnError
-mov [ebp-4], 3
-lea edx, [ebp-38]
-push edx
-...
-          </pre>
-        </div>
-        <div class="col-sm-6">
-          <pre class="prettyprint lang-vb">
-Private Sub Command1_Click()
-  On Error Resume Next
-  Dim local68 As String
-  Dim local58 As String
-  Dim local48 As String
-  Dim local38 As String
-  Dim local28 As Variant
-  local38 = Now()
-  local48 = Day(local38)
-  __local24 = __vbaI2Var(local48)
-  If __local24 > 10 Then
-    local68 = ">10"
-    Label1.Caption = local68
-  Else
-    local68 = "<=10"
-    Label1.Caption = local68
-  End If
-  local58 = __local24
-  Msgbox (local58)
-End Sub
-          </pre>
-        </div>
       </div>
     </div>
-    <div class="page-header text-muted" id="pubs"><h1>Publications<h1></div>
+    <div class="page-header text-muted text-right" id="pubs"><h1>Publications<h1></div>
     I am still working hard on this.<br>
     <ol>
       <li> <span class="label label-primary">Virtualization</span> Mingyuan Xia, Pin Zhou, David Pease, Xue Liu: <b>Taming IO Spikes in Enterprise and Campus VM Deployment</b>. The 7th ACM International Systems and Storage Conference (SYSTOR'14)</li>
@@ -410,7 +340,7 @@ End Sub
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion1" href="#life-art">
-              Artist: Auguste Rodin, Audrey Hepburn, Gary Oldman, M. C. Escher
+              Artist: Auguste Rodin, Audrey Hepburn, M. C. Escher
             </a>
           </h4>
         </div>
@@ -429,7 +359,7 @@ End Sub
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion1" href="#life-film">
               <span class="glyphicon glyphicon-film"></span>
-              Film: Chris Nolan, 押井 守, 神山 健治, 宮﨑 駿, 新海 誠, Ang Lee<br>
+              Film: Chris Nolan, 押井 守, 神山 健治, 宮﨑 駿, 新海 誠, Ang Lee, Gary Oldman<br>
             </a>
           </h4>
         </div>
@@ -475,15 +405,5 @@ End Sub
 <script src="js/bootstrap.min.js"></script>
 <script src="js/holder.js"></script>
 <script src="js/prettify.js"></script>
-<script>
-// sidebar effects
-$('#sidebar li').click(function(e) {
-  $('#sidebar li.active').removeClass('active');
-  var $this = $(this);
-  if (!$this.hasClass('active')) {
-    $this.addClass('active');
-  }
-});
-</script>
 </body>
 </html>
