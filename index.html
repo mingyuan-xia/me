@@ -25,6 +25,7 @@
     color: #ff0000;
     font-weight:bold;
   }
+  .firstdrop:first-child:first-letter { float: left; color: #903; font-size: 45px; line-height: 20px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: Georgia; }
   </style>
 </head>
 <body onload="prettyPrint()">
@@ -56,6 +57,8 @@
         </div>
         <div class="panel-body" id="appaudit">
           <span class="glyphicon glyphicon-pushpin"></span>
+          <b>New <a href="https://www.usenix.org/conference/fast15">FAST'15</a> paper on HDFS and erasure coding</b><br>
+          <span class="glyphicon glyphicon-pushpin"></span>
           <b><a href="https://github.com/mcgill-cpslab/droidresearch">Mobile Research Tools and Resources</a></b><br>
           <span class="glyphicon glyphicon-pushpin"></span>
           <b><a href="https://github.com/mingyuan-xia/AppAudit/wiki/Android-Malware-Analysis-Report-Collection">Large collection of Android virus analyses</a></b><br>
@@ -69,19 +72,45 @@
   </div>
 
   <div class="col-sm-8 col-xs-12" id="main">
-    <div class="page-header text-muted text-right" id="bio"><h1>Bio
+    <div class="page-header text-muted text-right" id="bio"><h1>Me
     </div>
     <p id="biotext">
-      I am a fourth-year PhD. student at McGill University. I am currently working on improving the security and quality of mobile applications with the help of program analysis. I am also interested in cloud storage systems and big data systems.
+      I am a fourth-year PhD. student at McGill University. I am interested in mobile software systems, including detecting new program bugs, checking security policies and generating autofix. I am also interested in storage systems and big data stacks, mainly the Spark and Hadoop stacks. I received my bachelor degree from Shanghai Jiao Tong University. 
     </p>
     <div class="page-header text-muted text-right" id="projects"><h1>Projects</h1></div>
+
     <!-- one !-->
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>AppAudit: Find Apps That Leak Personal Data</b>
+          <b>A Tale of Two Erasure Codes in HDFS</b>
+          <span class="label label-primary">Storage system</span>
+          <span class="label label-primary">Big data</span>
+        </h3>
+        <div class="btn-group pull-right">
+          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
+          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Download v0.3"><span class="glyphicon glyphicon-download-alt"></span></a>
+          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="View Github project repo"><span class="icomoon icon-github"></span></a>
+        </div>
+      </div>
+      <div class="panel-body" id="appaudit">
+        <p>
+        Enterprises continue to invest more and more disks to store growing data.
+        Now petabyte-scale data poses a great challenge on the maintenance cost (for replacing dead disks), which largely confines the scalability of big data systems.
+        Erasure coding is the technique that can store the same amount of data with 50% fewer disks, but at the cost of greater costs to recover unavailable data.
+        In this paper, we explore novel erasure coding inventions and system techniques to tame the challenging recovery cost.
+        Please refer to our FAST'15 paper for more details.
+        </p>
+
+      </div>
+    </div>
+    <!-- one !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>AppAudit: Detecting Data-leaking Mobile Apps</b>
           <span class="label label-primary">Software security</span>
-          <span class="label label-primary">Mobile apps</span>
+          <span class="label label-primary">Mobile software</span>
         </h3>
         <div class="btn-group pull-right">
           <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
@@ -91,14 +120,11 @@
       </div>
       <div class="panel-body" id="appaudit">
         <p>
-        We design AppAudit, a program analysis tool that analyzes Android apps to find data-leaking evidence.
-        AppAudit aims to be useful to end users as well as professionalists.
-        For end users, AppAudit helps to identify dangerous apps at installation time.
-        For professional use, AppAudit can quickly filter out zero-day data-leaking apps and report data-leaking code paths.
-        For the details about AppAudit's scalable analysis tecniques and online scanning service, please refer to the project page.
+        We design AppAudit, a program analysis tool that checks if an Android application leaks sensitive personal data.
+        AppAudit is designed to help mobile users to avoid installing such apps, assist app store operators to filter out zero-day privacy threats and prevent app developers from accidentally using data-leaking libraries.
         </p>
-	<img src="img/appaudit-overall.png" alt="The overall precision for detecting malware compared with mainstream antivirus and research projects">
-	<img src="img/appaudit-breakdown.png" alt="The precision breakdown per malware family">
+  <img src="img/appaudit-overall.png" alt="The overall precision for detecting malware compared with mainstream antivirus and research projects">
+  <img src="img/appaudit-breakdown.png" alt="The precision breakdown per malware family">
 
       </div>
     </div>
@@ -108,7 +134,7 @@
         <h3 class="panel-title">
           <b>AppBox: Sandboxing Apps</b>
           <span class="label label-primary">Software security</span>
-          <span class="label label-primary">Mobile apps</span>
+          <span class="label label-primary">Mobile software</span>
         </h3>
         <div class="btn-group pull-right">
           <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
@@ -139,7 +165,7 @@
       </div>
       <div class="panel-body">
         <p>
-          We provide a toolchian written in Python to capture, replay, manipulate and analyze the live user interations with a smartphone.
+          We provide a tool-chain written in Python to capture, replay, manipulate and analyze the live user interactions with a smartphone.
 	  Our record-and-replay capability is universal for all Android boxes. The manipulation and analyses can be highly customized with Python code.
 	  See a video showing record-and-replay AngryBirds.
 	  <p>
@@ -165,7 +191,7 @@
         <p>
           Programming a mobile-cloud application is hard considering the efforts of synchronizing data, managing different views, consistency and performance.
           We provide SLIM, a library that provide STL-like interfaces while distributing data across the device and the cloud.
-          SLIM reduces the programming efforts by providing interfaces familar to developers along with various pre-designed policies that address common tradeoffs.
+          SLIM reduces the programming efforts by providing interfaces familiar to developers along with various pre-defined policies that address common trade-offs.
           This project is an intern project with Microsoft Research Asia and has been published on Asia-Pacific System Symposium 2011.
           The below code snippet shows an example RSS reader that fetches and displays feed
         </p>
@@ -255,6 +281,8 @@ feeds.onUpdate([] (FeedItem newFeeds[]) {
     <div class="page-header text-muted text-right" id="pubs"><h1>Publications<h1></div>
     I am still working hard on this.<br>
     <ol>
+      <li> <span class="label label-primary">Cloud Storage System</span>
+      Mingyuan Xia, Mohit Saxena, Mario Blaum, David A. Pease: <b>A Tale of Two Erasure Codes in HDFS</b>. The 13th USENIX Conference on File and Storage Technologies (FAST '15)</li>
       <li> <span class="label label-primary">Virtualization</span> Mingyuan Xia, Pin Zhou, David Pease, Xue Liu: <b>Taming IO Spikes in Enterprise and Campus VM Deployment</b>. The 7th ACM International Systems and Storage Conference (SYSTOR'14)</li>
       <li> <span class="label label-primary">Mobile software reliability</span> Mingyuan Xia, Wenbo He, Xue Liu, Jie Liu: <b>Why Application Errors Drain Battery Easily? A Study of Memory Leaks in Smartphone Apps</b>. The 5th Workshop on Power-Aware Computing and Systems (HotPower'13)</li>
       <li> <span class="label label-primary">Sensor networks</span> Linghe Kong, Mingyuan Xia, Min-you Wu, Xue Liu: <b>Environment Reconstruction for Massive Data Loss in Wireless Sensor Networks</b>. The 32nd IEEE International Conference on Computer Communications (INFOCOM'13)
@@ -268,14 +296,24 @@ feeds.onUpdate([] (FeedItem newFeeds[]) {
       <li> <span class="label label-primary">Virtualization</span> Peijie Yu, Mingyuan Xia, Qian Lin, Min Zhu, Shang Gao, Zhengwei Qi, Kai Chen, Haibing Guan: <b>Real-time Enhancement for Xen Hypervisor</b>. The 8th International Conference on Embedded and Ubiquitous Computing (EUC'10)
     </ol>
 
-    <div class="page-header text-muted" id="life"><h1>Leisure Life</h1></div>
+    <div class="page-header text-muted" id="life"><h1>As a non-pro</h1></div>
     <o>
-      I am not confident of writing a good biography of myself, as a non-profession.
-      I was born in Shanghai, the economy center of China. In 1843, the Treaty of Nanking opens Shanghai to the world, which once comprises the distinct areas of settlement for British, French, America and Europeans. Thus Shanghai develops a unique fusion of native Chinese culture and the cultures from all over the world. The idea of diversity is rooted in this multi-cultured city as well as in me. After my university life at Shanghai Jiao Tong University, I moved to Montreal for my PhD. The English-French city has indeed impressed me with its wonderful French maisons and unbelievable cold winter as well as accidental fall of snow flake from the roof, kidding. Ironically, I am getting awareness of the old traditions and value systems that are being replaced by aggressive modernization of my hometown, by looking at Montreal.<br>
+      <div class="row">
+      <div class="col-md-8">
+      <p class="firstdrop">
+      I was born in Shanghai, the economy center of China. In 1843, the Treaty of Nanking opens this port to the world, which once comprises the distinct areas of settlement for British, French, American and European. As a treaty port, it survives the great destruction of WW2. Thus Shanghai develops and maintains a unique fusion of cultures from traditional China and various European countries. The city as well as I value peace, diversity and quality of life.</p>
+      <p>
+      After twenty-two years in this city, I moved to Montréal for my doctoral degree. The English-French city has indeed impressed me with its wonderful French maisons and unbelievable cold winter as well as accidental fall of snow flake from the roof, kidding. Ironically, I grow awareness of Chinese traditions and value systems that are being replaced by aggressive modernization, by looking at Montreal.</p>
+      <p>
+      I have interests in many things, and am willing to waste time on them. Occasionally, just occasionally, I would sneak out of my office to for a late night movie, a decent meal, a lazy afternoon with sunshine and Kindle, an afternoon tea, cuisine research, a spa, a visit to antique and art design stores or an obsessed afternoon of browsing Swiss watch catalog.</p>
 
-      I have interests in many things, and am willing to waste time on them. Occasionally, just occasionally, I would sneak out of my office to for a late night movie, a decent meal, an afternoon with Kindle in some random cafe, an afternoon tea, cusine research, a spa, a visit to antique and art design stores or an obsessed afternoon of browsing Swiss watch catalog. Personally, I feel that my leisure life might appear as boring as still water to most people.<br>
-
-      Here are some of my favorite works, people, and quotes:
+      Here are some great works and people that inspired me, and some quotes I would like to share:
+      </div>
+      <div class="col-md-4">
+        <img src="img/lighthouse.png" alt="" style="width:220px">
+        <b>The Old Lighthouse on the Bund, Shanghai</b>
+      </div>
+    </div>
     </p>
 
     <div class="panel-group" id="accordion1">
@@ -340,6 +378,7 @@ feeds.onUpdate([] (FeedItem newFeeds[]) {
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion1" href="#life-art">
+              <span class="glyphicon glyphicon-pencil"></span>
               Artist: Auguste Rodin, Audrey Hepburn, M. C. Escher
             </a>
           </h4>
