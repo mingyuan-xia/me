@@ -78,7 +78,26 @@
       I am a fourth-year PhD. student at McGill University. I am interested in mobile software systems, including detecting new program bugs, checking security policies and generating autofix. I am also interested in storage systems and big data stacks, mainly the Spark and Hadoop stacks. I received my bachelor degree from Shanghai Jiao Tong University. 
     </p>
     <div class="page-header text-muted text-right" id="projects"><h1>Projects</h1></div>
-
+    <!-- one !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Controlling Mobile Devices with Gestures in Vehicles</b>
+          <span class="label label-primary">Mobile system</span>
+        </h3>
+        <div class="btn-group pull-right">
+          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
+          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Download v0.3"><span class="glyphicon glyphicon-download-alt"></span></a>
+          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="View Github project repo"><span class="icomoon icon-github"></span></a>
+        </div>
+      </div>
+      <div class="panel-body" id="hacfs">
+        <p>
+        The small screen and touchscreen interactions of mobile devices could be uncomfortable for users in a moving vehicle. To overcome this limitation, we propose a rich set of gestures for performing fine-grained interacting with mobile device in a vehicle environment. Our system carefully picks gestures to allow easy control of vehicle applications (such as navigation, audio playback and phone call). Our algorithms overcome various road conditions that affect gesture recognition accuracy. This is an on-going project and we have a simple demo here:
+        </p>
+        <iframe width="420" height="315" src="//www.youtube.com/embed/Kxcua96ubD8" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
     <!-- one !-->
     <div class="panel panel-info">
       <div class="panel-heading">
@@ -93,13 +112,13 @@
           <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="View Github project repo"><span class="icomoon icon-github"></span></a>
         </div>
       </div>
-      <div class="panel-body" id="appaudit">
+      <div class="panel-body" id="hacfs">
         <p>
         Enterprises continue to invest more and more disks to store growing data.
         Now petabyte-scale data poses a great challenge on the maintenance cost (for replacing dead disks), which largely confines the scalability of big data systems.
         Erasure coding is the technique that can store the same amount of data with 50% fewer disks, but at the cost of greater costs to recover unavailable data.
         In this paper, we explore novel erasure coding inventions and system techniques to tame the challenging recovery cost.
-        Please refer to our FAST'15 paper for more details.
+        Please refer to our <a href="https://www.usenix.org/conference/fast15/technical-sessions/presentation/xia">FAST'15 paper</a> for more details.
         </p>
 
       </div>
@@ -123,8 +142,14 @@
         We design AppAudit, a program analysis tool that checks if an Android application leaks sensitive personal data.
         AppAudit is designed to help mobile users to avoid installing such apps, assist app store operators to filter out zero-day privacy threats and prevent app developers from accidentally using data-leaking libraries.
         </p>
-  <img src="img/appaudit-overall.png" alt="The overall precision for detecting malware compared with mainstream antivirus and research projects">
-  <img src="img/appaudit-breakdown.png" alt="The precision breakdown per malware family">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/appaudit-overall.png" alt="The overall precision for detecting malware compared with mainstream antivirus and research projects">
+          </div>
+          <div class="col-md-6">
+            <img src="img/appaudit-breakdown.png" alt="The precision breakdown per malware family">
+          </div>
+        </div>
 
       </div>
     </div>
