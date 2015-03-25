@@ -123,135 +123,154 @@
     <a href="http://dblp.uni-trier.de/pers/hd/x/Xia:Mingyuan.html" class="btn btn-default">Full publications @ DBLP</a>
 
     <div class="page-header text-muted text-right" id="projects"><h1>Projects</h1></div>
-    <!-- one !-->
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          <b>Controlling Mobile Devices with Gestures in Vehicles</b>
-        </h3>
-        <div class="btn-group pull-right">
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Download v0.3"><span class="glyphicon glyphicon-download-alt"></span></a>
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="View Github project repo"><span class="icomoon icon-github"></span></a>
-        </div>
-      </div>
-      <div class="panel-body" id="hacfs">
-	<div class="row">
-	<div class="col-md-6">
-        <p>
-        The small screen and touchscreen interactions of mobile devices could be uncomfortable for users in a moving vehicle. To overcome this limitation, we propose a rich set of gestures for performing fine-grained interacting with mobile device in a vehicle environment. Our system carefully picks gestures to allow easy control of vehicle applications (such as navigation, audio playback and phone call). Our algorithms overcome various road conditions that affect gesture recognition accuracy. This is an on-going project and we have a simple demo here:
-        </p>
-	</div>
-	<div class="col-md-6">
-		<div class="embed-responsive embed-responsive-16by9">
-	        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/Kxcua96ubD8" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</div>
-	</div>
-      </div>
-    </div>
-    <!-- one !-->
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          <b>A Tale of Two Erasure Codes in HDFS</b>
-        </h3>
-        <div class="btn-group pull-right">
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Download v0.3"><span class="glyphicon glyphicon-download-alt"></span></a>
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="View Github project repo"><span class="icomoon icon-github"></span></a>
-        </div>
-      </div>
-      <div class="panel-body" id="hacfs">
-        <p>
-        Enterprises continue to invest more and more disks to store growing data.
-        Now petabyte-scale data poses a great challenge on the maintenance cost (for replacing dead disks), which largely confines the scalability of big data systems.
-        Erasure coding is the technique that can store the same amount of data with 50% fewer disks, but at the cost of greater costs to recover unavailable data.
-        In this paper, we explore novel erasure coding inventions and system techniques to tame the challenging recovery cost.
-        Please refer to our <a href="https://www.usenix.org/conference/fast15/technical-sessions/presentation/xia">FAST'15 paper</a> for more details.
-        </p>
 
-      </div>
-    </div>
-    <!-- one !-->
+    <!-- app security !-->
     <div class="panel panel-info">
       <div class="panel-heading">
         <div class="panel-title">
-          <b>AppAudit: Detecting Data-leaking Mobile Apps</b>
-        <div class="btn-group pull-right">
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Download v0.3"><span class="glyphicon glyphicon-download-alt"></span></a>
-          <a class="btn btn-default" href="https://github.com/mingyuan-xia/AppAudit" data-toggle="tooltip" data-placement="top" title="View Github project repo"><span class="icomoon icon-github"></span></a>
-        </div>
+          <b>Secure the Apps in Your Pocket</b>
         </div>
       </div>
       <div class="panel-body" id="appaudit">
         <div class="row">
           <div class="col-md-8">
-        <p>
-        We design AppAudit, a program analysis tool that checks if an Android application leaks sensitive personal data.
-        AppAudit has three use cases:
-	</p>
-	<ul>
-	<li> help mobile users to avoid installing data-leaking apps; </li>
-	<li> assist app market operators to filter out zero-day privacy threats; </li>
-	<li> prevent app developers from accidentally using data-leaking libraries. </li>
-	</ul>
-        <b>AppAudit will appear at IEEE Symposium on Security and Privacy (S&P) 2015. </b>
-	<b>You can obtain the latest updates about AppAudit at <a href="http://appaudit.io">appaudit.io</a>.</b>
+            <h4>
+              <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
+              <b>AppAudit: Detecting Data-leaking Mobile Apps</b>
+            </h4>
+            <div class="btn-group">
+              <a href="http://appaudit.io" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Website">http://appaudit.io</a>
+              <a class="btn btn-default" href="https://github.com/mingyuan-xia/AppAudit" data-toggle="tooltip" data-placement="top" title="View Github project repo"><span class="icomoon icon-github"></span></a>
+            </div>
+            <p>
+            We design AppAudit, a program analysis tool that checks if an Android application leaks sensitive personal data.
+            AppAudit has three use cases:
+          	</p>
+          	<ul>
+          	<li> help mobile users to avoid installing data-leaking apps; </li>
+          	<li> assist app market operators to filter out zero-day privacy threats; </li>
+          	<li> prevent app developers from accidentally using data-leaking libraries. </li>
+          	</ul>
+            <b>AppAudit will appear at IEEE Symposium on Security and Privacy (S&P) 2015. </b>
           </div>
           <div class="col-md-4">
             <img class="img-responsive" src="img/appaudit-intro.png" alt="The overall precision for detecting malware compared with mainstream antivirus and research projects">
           </div>
         </div>
 
-      </div>
-    </div>
-    <!-- two !-->
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="panel-title">
+        <hr>
+        <h4>
+          <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
           <b>AppBox: Sandboxing Apps</b>
-        </h3>
-        <div class="btn-group pull-right">
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Download "><span class="glyphicon glyphicon-download-alt"></span></a>
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Visit Github project repo"><span class="icomoon icon-github"></span></a>
-        </div>
-      </div>
-      <div class="panel-body">
+        </h4>
         <p>
         Ever tried the privacy browsing mode of web browers? Now AppBox extends this to all Android apps.
         AppBox is a universal sandbox for Android apps. Apps that enter AppBox appear like newly installed and have limited accesses to system resources and user data.
         When app exits from the AppBox, all traces and data produced are scrubed, like it never happened.
         </p>
+
       </div>
     </div>
-    <!-- three !-->
+
+    <!-- mobile programming !-->
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>MonkeyHelper: Record, Replay and Understand User Interactions for Android</b>
+          <b>Program Mobile Applications Correctly and Easily</b>
         </h3>
-        <div class="btn-group pull-right">
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Technical report"><span class="glyphicon glyphicon-file"></span></a>
-          <a class="btn btn-default disabled" data-toggle="tooltip" data-placement="top" title="Download scripts"><span class="glyphicon glyphicon-download-alt"></span></a>
-          <a class="btn btn-default" href="https://github.com/mingyuan-xia/MonkeyHelper" data-toggle="tooltip" data-placement="top" title="Visit Github repo"><span class="icomoon icon-github"></span></a>
-        </div>
       </div>
       <div class="panel-body">
+        <h4>
+          <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
+          <b>Hey, Your App is Draining Battery for Leaking Memory</b>
+        </h4>
+        <p>
+          When programming mobile applications, memory leaks would be a common but tiny mistake, since they never get noticed unless the program crashes due to memory outage. However, we surprisingly find that memory leaks lead to more on mobile devices. When this happens, the system has to kick out normal apps to accommodate leaking ones. This causes some apps to be loaded repeatedly, slowing down the device and drains the battery. Our study confirms that this is not rare among real mobile applications.
+        </p>
+        <p>
+          <b>Paper available at HotPower'13.</b>
+        </p>
+        <hr>
+        <h4>
+          <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
+          <b>MonkeyHelper: Record, Replay and Understand User Interactions</b>
+        </h4>
+        <div class="btn-group">
+          <a class="btn btn-default" href="https://github.com/mingyuan-xia/MonkeyHelper" data-toggle="tooltip" data-placement="top" title="Visit Github repo"><span class="icomoon icon-github"></span></a>
+        </div>
         <p>
           We provide a tool-chain written in Python to capture, replay, manipulate and analyze the live user interactions with a smartphone.
-	  Our record-and-replay capability is universal for all Android boxes. The manipulation and analyses can be highly customized with Python code.
-	  See a video showing record-and-replay AngryBirds.
-	  <p>
-	  <div class="embed-responsive embed-responsive-16by9">
-	  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/vYlO0UrhRR8" frameborder="0" allowfullscreen></iframe>
-	  <iframe class=embed-responsive-item" src="//www.youtube.com/embed/4j8VpAO4XCg" frameborder="0" allowfullscreen></iframe>
-	  </div>
+          Our record-and-replay capability is universal for all Android boxes. The manipulation and analyses can be highly customized with Python code.
+           See a video showing record-and-replay AngryBirds.
         </p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="//www.youtube.com/embed/vYlO0UrhRR8" frameborder="0" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" src="//www.youtube.com/embed/4j8VpAO4XCg" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
+
+    <!-- storage !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Storage Systems Meet Big Data</b>
+        </h3>
+      </div>
+      <div class="panel-body" id="hacfs">
+        <h4>
+          <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
+          <b>A Tale of Two Erasure Codes in HDFS</b>
+        </h4>
+        <p>
+        Enterprises continue to invest more and more disks to store growing data.
+        Now petabyte-scale data poses a great challenge on the maintenance cost (for replacing dead disks), which largely confines the scalability of big data systems.
+        Erasure coding is the technique that can store the same amount of data with 50% fewer disks, but at the cost of greater costs to recover unavailable data.
+        In this paper, we explore novel erasure coding inventions and system techniques to tame the challenging recovery cost.
+        </p>
+        <p>
+        <b>Paper, video and slides available at <a href="https://www.usenix.org/conference/fast15/technical-sessions/presentation/xia">FAST'15</a>.</b>
+        </p>
+        
+        <hr>
+        <h4>
+          <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
+          <b>Optimizing Enterprise and Campus VM Deployments</b>
+        </h4>
+        <p>
+        Nowadays, enterprises and campuses virtualize their infrastructure to cut down capital cost and enable better IT management. Due to a mix of workloads, these VM deployments usually encounter IO spikes during some periods. In this work, we aim to understand IO patterns of these deployment and propose an automatic tool to reconfigure storage to better serve VMs.
+        </p>
+        <p><b>The paper is available at SYSTOR'14.</b></p>
+      </div>
+    </div>
+
+    <!-- leap !-->
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Extend the Frontier of Mobile Devices</b>
+        </h3>
+      </div>
+      <div class="panel-body" id="hacfs">
+        <h4>
+          <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
+          <b>Givs: Controlling Mobile Devices with Gestures in Vehicles</b>
+        </h4>
+        <div class="row">
+          <div class="col-md-7">
+          <p>
+          The small screen and touchscreen interactions of mobile devices could be uncomfortable for users in a moving vehicle. To overcome this limitation, we propose a rich set of gestures for performing fine-grained interacting with mobile device in a vehicle environment. Our system carefully picks gestures to allow easy control of vehicle applications (such as navigation, audio playback and phone call). Our algorithms overcome various road conditions that affect gesture recognition accuracy. This is an on-going project and we have a simple demo here:
+          </p>
+          </div>
+          <div class="col-md-5">
+            <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/Kxcua96ubD8" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+       </div>
+      </div>
+    </div>
+
     <!-- three !-->
     <div class="panel panel-info">
       <div class="panel-heading">
