@@ -9,9 +9,14 @@
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/prettify.css">
   <link rel="stylesheet" href="css/desert.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <style type="text/css">
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+  }
   .carousel .item {
     background-color:#bbb;
   }
@@ -29,7 +34,7 @@
   .firstdrop:first-child:first-letter { float: left; color: #903; font-size: 45px; line-height: 20px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: Georgia; }
   </style>
 </head>
-<body onload="prettyPrint()">
+<body>
 <div class="container">
 <div class="row">
   <div class="col-md-4 col-xs-12">
@@ -57,10 +62,12 @@
         </a>
       </div>
       <hr>
-      <div class="well">
       <span class="label label-primary">News</span>
-Visit <a href="http://appaudit.io">http://appaudit.io</a>.<br> and scan you Android apps for data leak problems.
-      </div>
+      Our paper on optimizing bandwidth allocation for video streaming systems is accepted to ACM Multimetida 2015.<br>
+      <span class="label label-primary">Release</span>
+<a href="https://github.com/mingyuan-xia/PATDroid">PATDroid: A Program Analysis Toolkit for Android</a><br>
+      <span class="label label-primary">Release</span>
+Use <a href="http://appaudit.io">AppAudit</a> to detect data leaks in your Android apps.
     </div>
   </div>
 
@@ -72,56 +79,94 @@ Visit <a href="http://appaudit.io">http://appaudit.io</a>.<br> and scan you Andr
     </p>
     <div class="page-header text-muted text-right" id="pubs"><h1>Publications<h1></div>
     <div class="row">
-      <div class="col-md-2 text-center">S&P'15</div>
+      <div class="col-md-2 text-center">ACM MM'15</div>
+      <div class="col-md-10">
+        Fanxin Kong, Xingjian Lu, <b>Mingyuan Xia</b>, Xue Liu, Haibing Guan: <u> Distributed Optimal Datacenter Bandwidth Allocation or Dynamic Adaptive Video Streaming</u>. ACM Multimedia 2015 (MM'15)
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 text-center">
+        S&P'15<br>
+        <a href="files/appaudit-paper.pdf"><span class="fa fa-file-pdf-o"></span></a>
+        <a href="files/appaudit-slides.pdf"><span class="fa fa-file-powerpoint-o"></span></a>
+        <a href="http://appaudit.io"><i class="glyphicon glyphicon-globe"></i></a>
+        <a href="https://github.com/mingyuan-xia/AppAudit"><span class="fa fa-github"></span></a>
+      </div>
       <div class="col-md-10">
         <b>Mingyuan Xia</b>, Lu Gong, Yuanhao Lv, Zhengwei Qi, Xue Liu: <u> Effective Real-time Android Application Auditing</u>. The 36th IEEE Symposium on Security and Privacy (IEEE S&P'15)
       </div>
     </div>
     <p></p>
     <div class="row">
-      <div class="col-md-2 text-center">FAST '15</div>
+      <div class="col-md-2 text-center">
+        FAST '15<br>
+        <a href="https://www.usenix.org/system/files/conference/fast15/fast15-paper-xia.pdf"><span class="fa fa-file-pdf-o"></span></a>
+        <a href="https://www.usenix.org/sites/default/files/conference/protected-files/fast15_xia_slides.pdf"><span class="fa fa-file-powerpoint-o"></span></a>
+        <a href="https://www.youtube.com/watch?v=KXd5U5fNQ6s"><span class="fa fa-youtube-play"></span></a>
+      </div>
       <div class="col-md-10">
         <b>Mingyuan Xia</b>, Mohit Saxena, Mario Blaum, David A. Pease: <u>A Tale of Two Erasure Codes in HDFS</u>. The 13th USENIX Conference on File and Storage Technologies (FAST '15)
       </div>
     </div>
     <p></p>
     <div class="row">
-      <div class="col-md-2 text-center">ICDCS '14</div>
+      <div class="col-md-2 text-center">
+        ICDCS '14<br>
+        <a href="http://www.emnets.org/dongw/pub/ICDCS14-domo.pdf"><span class="fa fa-file-pdf-o"></span></a>
+      </div>
       <div class="col-md-10">
         Yi Gao, Wei Dong, Chun Chen, Jiajun Bu, Tianyu Chen, <b>Mingyuan Xia</b>, Xue Liu, Xianghua Xu: <u>Domo: Passive Per-Packet Delay Tomography in Wireless Ad-hoc Networks</u>. IEEE 34th International Conference on Distributed Computing Systems (ICDCS '14)
       </div>
     </div>
     <p></p>
     <div class="row">
-      <div class="col-md-2 text-center">SYSTOR'14</div>
+      <div class="col-md-2 text-center">
+        SYSTOR'14<br>
+        <a href="http://dl.acm.org/citation.cfm?id=2611358"><span class="fa fa-file-pdf-o"></span></a>
+      </div>
       <div class="col-md-10">
         <b>Mingyuan Xia</b>, Pin Zhou, David Pease, Xue Liu: <u>Taming IO Spikes in Enterprise and Campus VM Deployment</u>. The 7th ACM International Systems and Storage Conference (SYSTOR'14)
       </div>
     </div>
     <p></p>
     <div class="row">
-      <div class="col-md-2 text-center">HotPower'13</div>
+      <div class="col-md-2 text-center">
+        HotPower'13<br>
+        <a href="http://dl.acm.org/citation.cfm?id=2525846"><span class="fa fa-file-pdf-o"></span></a>
+      </div>
       <div class="col-md-10">
         <b>Mingyuan Xia</b>, Wenbo He, Xue Liu, Jie Liu: <u>Why Application Errors Drain Battery Easily? A Study of Memory Leaks in Smartphone Apps</u>. The 5th Workshop on Power-Aware Computing and Systems (HotPower'13)
       </div>
     </div>
     <p></p>
     <div class="row">
-      <div class="col-md-2 text-center">INFOCOM'13</div>
+      <div class="col-md-2 text-center">
+        INFOCOM'13<br>
+        <a href="http://cpslab.cs.mcgill.ca/people/linghe/infocom13.pdf"><span class="fa fa-file-pdf-o"></span></a>
+      </div>
       <div class="col-md-10">
         Linghe Kong, <b>Mingyuan Xia</b>, Min-you Wu, Xue Liu: <u>Environment Reconstruction for Massive Data Loss in Wireless Sensor Networks</u>. The 32nd IEEE International Conference on Computer Communications (INFOCOM'13)
       </div>
     </div>
     <p></p>
     <div class="row">
-      <div class="col-md-2 text-center">TPDS'13</div>
+      <div class="col-md-2 text-center">
+        TPDS'13<br>
+        <a href="http://www-users.cs.umn.edu/~yugu/paper/LingheTPDS14.pdf"><span class="fa fa-file-pdf-o"></span></a>
+      </div>
       <div class="col-md-10">
         Linghe Kong, <b>Mingyuan Xia</b>, Xiao-Yang Liu, Guangshuo Chen, Yu Gu, Min-You Wu, Xue Liu: <u>Data Loss and Reconstruction in Wireless Sensor Networks</u>, IEEE Transactions on Parallel and Distributed Systems (TPDS'13)
       </div>
     </div>
     <p></p>
     <div class="row">
-      <div class="col-md-2 text-center">ICAC'13</div>
+      <div class="col-md-2 text-center">
+        ICAC'13<br>
+        <a href="http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/11775-icac13_xia.pdf"><span class="fa fa-file-pdf-o"></span></a>
+        <a href="https://www.usenix.org/sites/default/files/conference/protected-files/xia_icac13_slides.pdf"><span class="fa fa-file-powerpoint-o"></span></a>
+        <a href="https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/icac13/xia.mp3"><span class="fa fa-file-audio-o"></span></a>
+
+      </div>
       <div class="col-md-10">
         <b>Mingyuan Xia</b>, Nan Zhu, Yuxiong He, Sameh Elnikety, Xue Liu: <u>Performance Inconsistency in Large Scale Data Processing Clusters</u>. The 10th International Conference on Autonomic Computing (short paper, ICAC'13)
       </div>
@@ -143,14 +188,8 @@ Visit <a href="http://appaudit.io">http://appaudit.io</a>.<br> and scan you Andr
           <div class="col-md-8">
             <h4>
               <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
-              <b>AppAudit: Detecting Data-leaking Mobile Apps</b>
+              <a href="http://appaudit.io"><b>AppAudit: Detecting Data-leaking Mobile Apps</b></a>
             </h4>
-            <div class="btn-group">
-              <a href="http://appaudit.io" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Website"><i class="glyphicon glyphicon-globe"></i></a>
-              <a class="btn btn-default" href="https://github.com/mingyuan-xia/AppAudit" data-toggle="tooltip" data-placement="top" title="View Github project repo"><span class="fa fa-github"></span></a>
-              <a class="btn btn-default" href="files/appaudit-paper.pdf" data-toggle="tooltip" data-placement="top" title="S&P'15 paper"><span class="fa fa-file-pdf-o"></span></a>
-              <a class="btn btn-default" href="files/appaudit-slides.pdf" data-toggle="tooltip" data-placement="top" title="S&P'15 slides"><span class="fa fa-file-powerpoint-o"></span></a>
-            </div>
             <p>
             We design AppAudit, a program analysis tool that checks if an Android application leaks sensitive personal data.
             AppAudit has three use cases:
@@ -160,7 +199,6 @@ Visit <a href="http://appaudit.io">http://appaudit.io</a>.<br> and scan you Andr
           	<li> assist app market operators to filter out zero-day privacy threats; </li>
           	<li> prevent app developers from accidentally using data-leaking libraries. </li>
           	</ul>
-            <b>Published at IEEE Symposium on Security and Privacy (S&P) 2015. </b>
           </div>
           <div class="col-md-4">
             <img class="img-responsive" src="img/appaudit-intro.png" alt="The overall precision for detecting malware compared with mainstream antivirus and research projects">
@@ -196,17 +234,11 @@ Visit <a href="http://appaudit.io">http://appaudit.io</a>.<br> and scan you Andr
         <p>
           When programming mobile applications, memory leaks would be a common but tiny mistake, since they never get noticed unless the program crashes due to memory outage. However, we surprisingly find that memory leaks lead to more on mobile devices. When this happens, the system has to kick out normal apps to accommodate leaking ones. This causes some apps to be loaded repeatedly, slowing down the device and drains the battery. Our study confirms that this is not rare among real mobile applications.
         </p>
-        <p>
-          <b>Paper available at HotPower'13.</b>
-        </p>
         <hr>
         <h4>
           <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
-          <b>MonkeyHelper: Record, Replay and Understand User Interactions</b>
+          <a href="https://github.com/mingyuan-xia/MonkeyHelper"><b>MonkeyHelper: Record, Replay and Understand User Interactions</b></a>
         </h4>
-        <div class="btn-group">
-          <a class="btn btn-default" href="https://github.com/mingyuan-xia/MonkeyHelper" data-toggle="tooltip" data-placement="top" title="Visit Github repo"><span class="fa fa-github"></span></a>
-        </div>
         <p>
           We provide a tool-chain written in Python to capture, replay, manipulate and analyze the live user interactions with a smartphone.
           Our record-and-replay capability is universal for all Android boxes. The manipulation and analyses can be highly customized with Python code.
@@ -231,33 +263,19 @@ Visit <a href="http://appaudit.io">http://appaudit.io</a>.<br> and scan you Andr
           <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
           <b>A Tale of Two Erasure Codes in HDFS</b>
         </h4>
-        <div class="btn-group">
-          <a class="btn btn-default" href="https://www.usenix.org/system/files/conference/fast15/fast15-paper-xia.pdf" data-toggle="tooltip" data-placement="top" title="paper"><span class="fa fa-file-pdf-o"></span></a>
-          <a class="btn btn-default" href="https://www.usenix.org/sites/default/files/conference/protected-files/fast15_xia_slides.pdf" data-toggle="tooltip" data-placement="top" title="S&P'15 slides"><span class="fa fa-file-powerpoint-o"></span></a>
-          <a class="btn btn-default" href="https://www.youtube.com/watch?v=KXd5U5fNQ6s" data-toggle="tooltip" data-placement="top" title="video"><span class="fa fa-youtube-play"></span></a>
-        </div>
-        <br>
         Enterprises continue to invest more and more disks to store growing data.
         Now petabyte-scale data poses a great challenge on the maintenance cost (for replacing dead disks), which largely confines the scalability of big data systems.
         Erasure coding is the technique that can store the same amount of data with 50% fewer disks, but at the cost of greater costs to recover unavailable data.
         In this paper, we explore novel erasure coding inventions and system techniques to tame the challenging recovery cost.
         </p>
-        <p>
-        <b>Paper, video and slides available at <a href="https://www.usenix.org/conference/fast15/technical-sessions/presentation/xia">FAST'15</a>.</b>
-        </p>
-        
         <hr>
         <h4>
           <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
           <b>Optimizing Enterprise and Campus VM Deployments</b>
         </h4>
-        <div class="btn-group">
-          <a class="btn btn-default" href="http://dl.acm.org/citation.cfm?id=2611358em/files/conference/fast15/fast15-paper-xia.pdf" data-toggle="tooltip" data-placement="top" title="paper"><span class="fa fa-file-pdf-o"></span></a>
-        </div>
-        <br>
+        <p>
         Nowadays, enterprises and campuses virtualize their infrastructure to cut down capital cost and enable better IT management. Due to a mix of workloads, these VM deployments usually encounter IO spikes during some periods. In this work, we aim to understand IO patterns of these deployment and propose an automatic tool to reconfigure storage to better serve VMs.
         </p>
-        <p><b>The paper is available at SYSTOR'14.</b></p>
       </div>
     </div>
 
@@ -265,14 +283,10 @@ Visit <a href="http://appaudit.io">http://appaudit.io</a>.<br> and scan you Andr
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>Extend the Frontier of Mobile Devices</b>
+          <b>Givs: Controlling Mobile Devices with Gestures in Vehicles</b>
         </h3>
       </div>
-      <div class="panel-body" id="hacfs">
-        <h4>
-          <i class="glyphicon glyphicon-pushpin" aria-hidden="true"></i>
-          <b>Givs: Controlling Mobile Devices with Gestures in Vehicles</b>
-        </h4>
+      <div class="panel-body" id="givs">
         <div class="row">
           <div class="col-md-7">
           <p>
@@ -296,37 +310,19 @@ Visit <a href="http://appaudit.io">http://appaudit.io</a>.<br> and scan you Andr
         </h3>
       </div>
       <div class="panel-body">
-        <div class="btn-group">
-          <a class="btn btn-default" href="http://apsys11.ucsd.edu/papers/apsys11-shi.pdf" data-toggle="tooltip" data-placement="top" title="paper"><span class="fa fa-file-pdf-o"></span></a>
-        </div>
         <p>
           Programming a mobile-cloud application is hard considering the efforts of synchronizing data, managing different views, consistency and performance.
           We provide SLIM, a library that provide STL-like interfaces while distributing data across the device and the cloud.
           SLIM reduces the programming efforts by providing interfaces familiar to developers along with various pre-defined policies that address common trade-offs.
-          This project is an intern project with Microsoft Research Asia and has been published on Asia-Pacific System Symposium 2011.
-          The below code snippet shows an example RSS reader that fetches and displays feed
+          This project is an intern project with Microsoft Research Asia and has been published on <a href="http://apsys11.ucsd.edu/papers/apsys11-shi.pdf">Asia-Pacific System Symposium 2011</a>.
         </p>
-        <pre class="prettyprint lang-c">
-// a SLIM vector of feed items
-// persistency policy: stored in memory, flash and cloud
-// read/write policy: writes come from cloud to device
-// update policy: invoke callback when the vector has one dirty (new) item
-typedef SLIMVector< FeedItem, Memory_Flash_Cloud, Cloud_To_Device, OnDirtyBound<1> > UpdateVector;
-UpdateVector feeds("rss://..");
-// set update callback function
-feeds.onUpdate([] (FeedItem newFeeds[]) {
-// iterate through all newfeeds and display
-    foreach (feed in newFeeds)
-      display(feed);
-});
-        </pre>
       </div>
     </div>
     <!-- four !-->
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>CuteStrike: a cute multi-player 2D CounterStrike-like shooting game</b>
+          <b>CuteStrike: A Cute Multi-player 2D Shooting Game</b>
         </h3>
       </div>
       <div class="panel-body">
@@ -376,7 +372,7 @@ feeds.onUpdate([] (FeedItem newFeeds[]) {
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>dumpvb6: A practical VB6 decompiler</b>
+          <b>dumpvb6: A Practical VB6 Decompiler</b>
         </h3>
       </div>
       <div class="panel-body">
@@ -484,10 +480,6 @@ feeds.onUpdate([] (FeedItem newFeeds[]) {
         </div>
         <div id="life-art" class="panel-collapse collapse">
           <div class="panel-body">
-            <blockquote class="blockquote">
-              <p>Gordon: I'm sorry, Harvey. For everything. But, please. Please don't hurt him.</p>
-              <footer>Gary Oldman, cast in <cite title="Five-color flower">The Dark Knight</cite></footer>
-            </blockquote>
           </div>
         </div>
       </div>
@@ -506,6 +498,10 @@ feeds.onUpdate([] (FeedItem newFeeds[]) {
             <blockquote class="blockquote">
               <p>Where is the boundary between human and machine when the differences between the two become more philosophical than physical?</p>
               <footer>押井 守, <cite title="Ghost in the shell">Ghost in the shell</cite></footer>
+            </blockquote>
+            <blockquote class="blockquote">
+              <p>Gordon: I'm sorry, Harvey. For everything. But, please. Please don't hurt him.</p>
+              <footer>Gary Oldman, cast in <cite title="Five-color flower">The Dark Knight</cite></footer>
             </blockquote>
           </div>
         </div>
@@ -535,14 +531,13 @@ feeds.onUpdate([] (FeedItem newFeeds[]) {
 </div>
 <div id="footer">
   <div class="container">
-    <span class="glyphicon glyphicon-copyright-mark">Copyright Mingyuan Xia, 2013-2014</span>
-    <p class="text-muted">This web page is made of bootstrap3, jQuery, with icons from icomoon. I am still new to these things.</p>
+    <span class="fa fa-copyright"></span> Copyright Mingyuan Xia, 2013-2015
+    <p class="text-muted">This web page is made of bootstrap3, jQuery, fontawesome, icomoon and Google Analytics.</p>
   </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/holder.js"></script>
-<script src="js/prettify.js"></script>
 <script src="js/ga.js"></script>
 </body>
 </html>
