@@ -41,7 +41,7 @@
     <div id="sidebar" class="nav">
       <div class="text-center">
         <a href="https://mxia.me">
-         <img src="img/mingyuan-xia.jpg" width="200px" height="200px">
+         <img src="img/mingyuan-xia.png" width="200px" height="200px">
         </a>
         <h2>Mingyuan (Ken) Xia</h2>
         <img src="img/chinese.png" width="160"/><br /
@@ -141,9 +141,9 @@
             AppAudit has three use cases:
           	</p>
           	<ul>
-          	<li> help mobile users to avoid installing data-leaking apps; </li>
-          	<li> assist app market operators to filter out zero-day privacy threats; </li>
-          	<li> prevent app developers from accidentally using data-leaking libraries. </li>
+          	<li> helps mobile users to avoid installing data-leaking apps; </li>
+          	<li> assists app market operators to filter out zero-day privacy threats; </li>
+          	<li> prevents app developers from accidentally using data-leaking libraries. </li>
           	</ul>
           </div>
           <div class="col-md-4">
@@ -157,9 +157,9 @@
           <b>AppBox: Sandboxing Apps</b>
         </h4>
         <p>
-        Ever tried the privacy browsing mode of web browers? Now AppBox extends this to all Android apps.
+        Ever tried the privacy browsing mode of web browsers? Now AppBox extends this to all Android apps.
         AppBox is a universal sandbox for Android apps. Apps that enter AppBox appear like newly installed and have limited accesses to system resources and user data.
-        When app exits from the AppBox, all traces and data produced are scrubed, like it never happened.
+        When an app exits from AppBox, all traces and data produced are removed, like it never happened.
         </p>
 
       </div>
@@ -178,7 +178,7 @@
           <b>Hey, Your App is Draining Battery for Leaking Memory</b>
         </h4>
         <p>
-          When programming mobile applications, memory leaks would be a common but tiny mistake, since they never get noticed unless the program crashes due to memory outage. However, we surprisingly find that memory leaks lead to more on mobile devices. When this happens, the system has to kick out normal apps to accommodate leaking ones. This causes some apps to be loaded repeatedly, slowing down the device and drains the battery. Our study confirms that this is not rare among real mobile applications.
+          Memory leaks are a common but usually overlooked problem, since they are seldom noticed unless the program crashes due to OOM. However, we find that memory leaks could cause more damages on mobile computing. When a foreground memory-hungry (leaking) app overuses memory, the OS has to kill normal (sleeping background) apps to reclaim memory. This causes more apps to be loaded repeatedly when a user needs them, slowing down the entire system and drains the battery. Our study reveals that this is common for real-world mobile applications.
         </p>
         <hr>
         <h4>
@@ -186,9 +186,9 @@
           <a href="https://github.com/mingyuan-xia/MonkeyHelper"><b>MonkeyHelper: Record, Replay and Understand User Interactions</b></a>
         </h4>
         <p>
-          We provide a tool-chain written in Python to capture, replay, manipulate and analyze the live user interactions with a smartphone.
-          Our record-and-replay capability is universal for all Android boxes. The manipulation and analyses can be highly customized with Python code.
-           See a video showing record-and-replay AngryBirds.
+          We provide a chain of tools to capture, replay, manipulate and analyze the live user interactions (tap, scroll, pinch, etc) with a smartphone.
+          Our record-and-replay capability is universal for all Android boxes and helps automated testing. The manipulation and analyses capability can be used to detect user intent and further stress test apps.
+          See a video for record-and-replay-ing AngryBirds.
         </p>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="//www.youtube.com/embed/vYlO0UrhRR8" frameborder="0" allowfullscreen></iframe>
@@ -257,10 +257,10 @@
       </div>
       <div class="panel-body">
         <p>
-          Programming a mobile-cloud application is hard considering the efforts of synchronizing data, managing different views, consistency and performance.
-          We provide SLIM, a library that provide STL-like interfaces while distributing data across the device and the cloud.
-          SLIM reduces the programming efforts by providing interfaces familiar to developers along with various pre-defined policies that address common trade-offs.
-          This project is an intern project with Microsoft Research Asia and has been published on <a href="http://apsys11.ucsd.edu/papers/apsys11-shi.pdf">Asia-Pacific System Symposium 2011</a>.
+          Programming a mobile-cloud application is hard, considering the efforts of synchronizing data, managing different views, consistency and performance.
+          We propose the SLIM framework that provides STL-like interfaces while automatically managing data structures between devices and the cloud.
+          SLIM provides easy abstraction to developers with many built-in policies to allow for flexible system tradeoffs (e.g., consistency vs. performance).
+          This project was an intern project with Microsoft Research Asia and was published on <a href="http://apsys11.ucsd.edu/papers/apsys11-shi.pdf">Asia-Pacific System Symposium 2011</a>.
         </p>
       </div>
     </div>
@@ -268,13 +268,13 @@
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>CuteStrike: A Cute Multi-player 2D Shooting Game</b>
+          <b>CuteStrike: A Cute 2D Remake of CounterStrike</b>
         </h3>
       </div>
       <div class="panel-body">
         CounterStrike is a classic first-person shooting game.
-        We made it cute! You will see cute buns moving around in a 2D dust2 map!
-        CuteStrike allows you to challenge AIs we design or play with real people over network.
+        We made it cute! You will see cute buns (players) moving around in a 2D dust2 map!
+        AIs (even very tricky ones) are made for players and we also support LAN connected players.
         <br>
         <div id="carousel-cute" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -294,7 +294,7 @@
             <div class="item">
               <img class="cute-carousel-img" src="img/cute2.jpg" alt="cute caught">
               <div class="carousel-caption">
-                I got caught by the noobs AI while taking the photo.
+                I got caught by a noob AI while taking the photo.
               </div>
             </div>
             <div class="item">
@@ -318,17 +318,18 @@
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          <b>dumpvb6: A Practical VB6 Decompiler</b>
+          <b>dumpvb6: A Working VB6 Decompiler</b>
         </h3>
       </div>
       <div class="panel-body">
 	<div class="row">
 		<div class="col-md-6">
-        This is a geeky toy I made when I was 14. You give me a VB6 program and I give you the source code.
-        VB6 stands for Microsoft's Visual Basic 6, a language that produces GUI programs in minutes!
-        VB6 is straightforward and easy to learn and was once the most popular and successful language for GUI programs.
-        Dumpvb6 did a hacky job by present the source code of a compiled VB6 program, which exposes all its secrets.
-        Due to potential copyright concern, this project is only for academic purpose and not intended to be released.
+        This was once a self-taught practice implementation decompiler I coded at the age of 14.
+        VB6 stands for Microsoft's Visual Basic 6, a WYSIWYG GUI programming language, once very popular and successful.
+        By reverse compiling a program, one learns all its secrets and thus de-compilation was the ultimate cracking tool I was dreamed of making at that moment.
+        Quite some efforts were spent to reverse the serialized COM+ component properties (for VB6 GUI widgets) and reconstruct expressions, types and control flows from streamlined calls to msvbvm60.dll helper functions.
+        About 10 years later, a tech report about it was submitted as a course report to Prof. Laurie Hendren (my life tutor) for guidance on serious program analysis.
+        Due to copyright concerns, this project is archived only for an once learning purpose and not intended to be released to the public.
 		</div>
 		<div class="col-md-6">
         		<img class="img-responsive" src="img/dumpvb6-vb6.jpg" alt="Code snippet of VB6">
@@ -342,17 +343,17 @@
       <div class="row">
       <div class="col-md-8">
       <p class="firstdrop">
-      I was born in Shanghai, the economy center of China. In 1843, the Treaty of Nanking opens this city to the world, which once comprises the distinct areas of settlement for British, French, American and European. Thus Shanghai develops and maintains a unique fusion of cultures from traditional China (Wu) and various European countries. As a treaty port, it survives the great destruction of WW2. The citizens value peace, diversity and quality of life.</p>
+      I was born in Shanghai, the (now) economy center of China. In 1843, the Treaty of Nanking opens this city to the world, which once comprises the distinct areas of settlement for British, French, American and other European countries. Thus Shanghai develops and maintains a unique fusion of cultures from traditional China (Wu Territory) and various Western countries. As a treaty port, it survives the great destruction of WW2. The citizens value peace, diversity and quality of life.</p>
       <p>
-      After twenty-two years in this city, I moved to Montréal for my doctoral degree. The English-French city has indeed impressed me with its wonderful maisons and unbelievable cold winter as well as accidental fall of snow flake from the roof, kidding. Ironically, I grow awareness of Chinese traditions and values that are being replaced by aggressive modernization, by looking at Montreal.</p>
+      After twenty-two years in this city, I moved to Montréal for my doctoral degree. The English-French city has indeed impressed me with its wonderful maisons and unbelievable cold winter as well as accidental fall of snow flake from the roof, kidding. Ironically, by looking at the city of Montreal, I grow awareness of Chinese traditions and values that are being replaced by aggressive modernization.</p>
       <p>
-      I have interests in many things, and am willing to waste time on them. Sneak out for a late night movie, a decent meal, cuisine research, a water spa, a visit to antique and small art galleries or an obsessed afternoon of browsing Swiss watch catalog.</p>
+      I have interests in many aspects, and am willing to waste time on them. Sneak out for a late night movie, a decent meal, cuisine research, a water spa, a visit to antique and local art galleries or an obsessed afternoon of browsing Swiss watch catalog.</p>
 
       Here are some great works and people that inspired me, and some quotes I would like to share:
       </div>
       <div class="col-md-4">
         <img src="img/lighthouse.png" alt="" style="width:220px">
-        <b>The Old Lighthouse, Shanghai Bund, not a restaurant nor a cheap exotic wine shop</b>
+        <b>The Old Lighthouse, Shanghai Bund. A marker for its original development point, not a restaurant nor a cheap exotic wine shop</b>
       </div>
     </div>
     </p>
@@ -382,7 +383,7 @@
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion1" href="#life-poem">
               <span class="icomoon icon-quill"></span>
-              Poerty: 北岛 (Zhao Zhengkai), Dante Alighieri, Alexander Pope
+              Poetry: 北岛 (Zhao Zhengkai), Dante Alighieri, Alexander Pope
             </a>
           </h4>
         </div>
@@ -420,7 +421,7 @@
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion1" href="#life-art">
               <span class="glyphicon glyphicon-pencil"></span>
-              Artist: Auguste Rodin, Audrey Hepburn, M. C. Escher
+              Artist: Auguste Rodin, M. C. Escher, Claude Monet 
             </a>
           </h4>
         </div>
@@ -436,7 +437,7 @@
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion1" href="#life-film">
               <span class="glyphicon glyphicon-film"></span>
-              Film: Chris Nolan, George Lucas, 押井 守, 神山 健治, 宮﨑 駿, 新海 誠, Ang Lee, Gary Oldman<br>
+              Motion Picture: Chris Nolan, George Lucas, 押井 守(Mamoru Oshii), 神山 健治(Kenji Kamiyama), 宮﨑 駿(Hayao Miyazaki), 新海 誠(Makoto Shinkai), Ang Lee, Gary Oldman, Heath Ledger<br>
             </a>
           </h4>
         </div>
@@ -459,14 +460,70 @@
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion1" href="#life-music">
               <span class="glyphicon glyphicon-music"></span>
-              Music: 久石 譲, George Winston<br>
+              Music: 久石 譲(Joe Hisaishi), George Winston, Bach<br>
             </a>
           </h4>
         </div>
         <div id="life-music" class="panel-collapse collapse">
           <div class="panel-body">
             <blockquote class="blockquote">
-              <p>I’ve found the light of your voice; it has always been with me</p>
+              <pre>
+                呼んでいる 胸のどこか奥で
+                Somewhere, a voice calls, in the depths of my heart
+                いつも心踊る 夢を見たい
+                May I always be dreaming, the dreams that move my heart
+                かなしみは 数えきれないけれど
+                So many tears of despair, uncountable through and through
+                その向こうできっと あなたに会える
+                I know on the other side of them I'll be sure to find you
+                
+                繰り返すあやまちの そのたび ひとは
+                Every time we fall down to the ground we look up to the sky above
+                ただ青い空の 青さを知る
+                We wake to it's blueness, as if for the first time
+                果てしなく 道は続いて見えるけれど
+                Though the road is long, lonely and the end far away, out of sight
+                この両手は 光を抱ける
+                I can, with these arms, embrace the light
+                
+                さよならのときの 静かな胸
+                As I bid farewell my heart stops, tenderly I feel
+                ゼロになるからだが 耳をすませる
+                My silent empty soul begins to listen to what is real
+                生きている不思議 死んでいく不思議
+                The wonder of living, the wonder of dying
+                花も風も街も みんなおなじ
+                The wind, town, and flowers, we all dance in unity
+                
+                呼んでいる 胸のどこか奥で
+                Somewhere, a voice calls, in the depths of my heart
+                いつも何度でも 夢を描こう
+                keep dreaming your dreams, don't ever let them part
+                かなしみの数を 言い尽くすより
+                Why speak of all your sadness or of life's painful woes
+                同じくちびるで そっとうたおう
+                Instead let the same voice sing a gentle song for you
+                
+                閉じていく思い出の そのなかにいつも
+                The whispering voice, we will never want to forget,
+                忘れたくない ささやきを聞く
+                in each passing memory always there to guide you
+                こなごなに砕かれた 鏡の上にも
+                When a mirror has been broken, shattered pieces scattered on the ground
+                新しい景色が 映される
+                Glimpses of new life, are reflected all around
+                
+                はじまりの朝の 静かな窓
+                Window of beginning let shine the light of a new dawn
+                ゼロになるからだ 充たされてゆけ
+                Let my silent, empty soul be filled and reborn
+                海の彼方には もう探さない
+                No need to search the land, nor sail across the sea
+                輝くものは いつもここに
+                'Cause it's here shining inside me, it's right here deep inside me
+                わたしのなかに 見つけられたから
+                Thanks to you I've found the light, and it's always with me
+                </pre>
               <footer>木村 弓,<cite title="">いつも何度でも (Always with me)</cite></footer>
             </blockquote>
           </div>
@@ -478,7 +535,7 @@
 </div>
 <div id="footer">
   <div class="container">
-    <span class="fa fa-copyright"></span> Copyright Mingyuan Xia, 2013-2022
+    <span class="fa fa-copyright"></span> Copyright Mingyuan Xia, 2013-2024
   </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
